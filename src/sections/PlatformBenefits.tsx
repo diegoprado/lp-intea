@@ -1,5 +1,7 @@
 import Icon from '@/components/ui/Icon';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
 
 interface BenefitCardProps {
   title: string;
@@ -43,7 +45,7 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
   return (
     <div className={`relative ${isEven ? 'ml-auto' : ''} xl:w-7/12 2xl:w-8/12`}>
       <div
-        className={`bg-${bgColor} rounded-3xl p-6 text-white shadow-lg flex flex-col gap-4 w-full relative z-10`}
+        className={`bg-${bgColor} rounded-3xl p-6 text-white shadow-lg flex flex-col gap-4 w-full relative z-10 min-h-[350px]`}
       >
         <div className='flex justify-between items-center'>
           <h3 className='text-2xl xl:text-5xl 2xl:text-7xl font-bold'>
@@ -72,7 +74,7 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
       </div>
 
       <div
-        className={`absolute top-1/2 -translate-y-1/2 ${
+        className={`hidden lg:flex absolute top-1/2 -translate-y-1/2 ${
           isEven
             ? 'xl:left-[-90%] 2xl:left-[-60%]'
             : 'xl:right-[-90%] 2xl:right-[-60%]'
@@ -140,14 +142,52 @@ const cards = [
 ];
 
 const PlatformBenefits = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [offset, setOffset] = useState(16);
+
+  useEffect(() => {
+    const updateOffset = () => {
+      if (containerRef.current) {
+        const left = containerRef.current.getBoundingClientRect().left;
+        setOffset(left);
+      }
+    };
+
+    updateOffset();
+    window.addEventListener('resize', updateOffset);
+    return () => window.removeEventListener('resize', updateOffset);
+  }, []);
   return (
-    <section className='py-40 bg-intea-gray-light relative overflow-hidden'>
-      <div className='container mx-auto px-4'>
-        <div className='flex flex-col gap-24'>
+    <section className='py-10 lg:py-40 bg-intea-gray-light relative overflow-hidden'>
+      <div className='container mx-auto lg:px-4'>
+        <div className='hidden lg:flex flex-col gap-24'>
           {cards.map((card, index) => (
             <BenefitCard key={index} {...card} isEven={index % 2 === 1} />
           ))}
         </div>
+
+        <Swiper
+          modules={[Pagination]}
+          spaceBetween={24}
+          slidesPerView={'auto'}
+          slidesOffsetBefore={offset}
+          slidesOffsetAfter={offset}
+          pagination={{
+            clickable: true,
+            bulletClass: 'swiper-pagination-bullet',
+            bulletActiveClass: 'swiper-pagination-bullet-active',
+          }}
+          className='pb-16'
+        >
+          {cards.map((card, index) => (
+            <SwiperSlide
+              key={index}
+              className='!w-[85%] md:!w-[70%] lg:!w-[60%]'
+            >
+              <BenefitCard key={index} {...card} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );

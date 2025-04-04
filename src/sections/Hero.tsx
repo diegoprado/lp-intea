@@ -26,8 +26,8 @@ const Hero = () => {
 
       <div className='container mx-auto relative z-10 pt-36 px-4'>
         <div className='flex flex-col lg:flex-row items-start lg:items-center justify-between'>
-          <div className='lg:w-7/12 text-white'>
-            <h1 className='text-5xl lg:text-7xl font-bold mb-6'>
+          <div className='mt-10 lg:mt-0 lg:w-7/12 text-white'>
+            <h1 className='text-4xl lg:text-7xl font-bold mb-6'>
               Gestão terapêuptica baseada em{' '}
               <span className='text-intea-teal-darker'>ABA</span> para crianças
               com <span className='text-intea-teal-darker'>autismo</span>.
@@ -39,7 +39,7 @@ const Hero = () => {
               a família, a ecola e as operadoras de saúde.
             </p>
 
-            <div className='flex flex-wrap gap-4'>
+            <div className='flex flex-col lg:flex-row lg:flex-wrap gap-4'>
               <Button variant='secondary' leftIcon='plus' iconSize='sm'>
                 Conheça mais sobre o Intea
               </Button>

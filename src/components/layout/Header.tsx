@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import LanguageSwitcher from '../LanguageSwitcher';
-import Icon from '../ui/Icon';
+// import LanguageSwitcher from '../LanguageSwitcher';
+// import Icon from '../ui/Icon';
 
 interface HeaderProps {
   className?: string;
@@ -46,7 +46,8 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
 
     // Remover listener quando o componente for desmontado
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollPos]);
+  }, []);
+  // }, [prevScrollPos]);
 
   // Itens de navegação principal
   // const navItems: NavItem[] = [
@@ -114,13 +115,13 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
             </nav> */}
 
             {/* Menu mobile e seletor de idioma */}
-            <LanguageSwitcher />
+            {/* <LanguageSwitcher /> */}
 
-            <div className='flex items-center gap-4'>
+            {/* <div className='flex items-center gap-4'>
               <button className='md:hidden p-2 text-white'>
                 <Icon name='menu' size='lg' color='white' />
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
