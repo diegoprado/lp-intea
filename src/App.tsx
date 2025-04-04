@@ -5,6 +5,7 @@ import i18n from './i18n';
 import { JsonLd, PageSEO } from './components/seo';
 import seoConfig from './config/seo';
 import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
 import Hero from './sections/Hero';
 import Benefits from './sections/Benefits';
 import PlatformBenefits from './sections/PlatformBenefits';
@@ -33,6 +34,7 @@ function App() {
             <HowToUse />
             {/* Outras seções serão adicionadas aqui */}
           </main>
+          <Footer />
         </div>
       </I18nextProvider>
     </HelmetProvider>

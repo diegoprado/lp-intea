@@ -1,4 +1,3 @@
-import React from 'react';
 import CurveShape from '../components/ui/CurveShape';
 import Button from '../components/ui/Button';
 
@@ -21,6 +20,7 @@ const Hero = () => {
           fill='white'
           height='80'
           className='md:h-64 lg:h-80'
+          hasIconDown
         />
       </div>
 

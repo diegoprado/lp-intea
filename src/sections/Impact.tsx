@@ -3,8 +3,8 @@ import Button from '../components/ui/Button';
 
 const Impact = () => {
   return (
-    <section className='container mx-auto py-20 bg-intea-teal rounded-3xl mx-4 my-12 relative overflow-hidden after:content-[] after:absolute after:w-[70%] after:h-[100%] after:right-[0] after:top-0 after:bg-[url(/images/hero-spheres.png)] bg-contain'>
-      <div className='px-16'>
+    <section className='bg-intea-gray-light '>
+      <div className='container mx-auto bg-intea-teal rounded-3xl relative overflow-hidden after:content-[] after:absolute after:w-[70%] after:h-[100%] after:right-[0] after:top-0 after:bg-[url(/images/hero-spheres.png)] bg-contain'>
         <div className='flex flex-col md:flex-row gap-8 items-center justify-center'>
           {/* Coluna de texto */}
           <div className='md:w-1/2 text-white'>

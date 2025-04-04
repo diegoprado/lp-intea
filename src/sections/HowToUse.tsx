@@ -126,10 +126,10 @@ const HowToUse: React.FC = () => {
   }, []);
 
   return (
-    <section className='py-24 bg-white'>
+    <section className='py-24 bg-intea-gray-light'>
       <div ref={containerRef} className='container mx-auto px-4 mb-8'>
-        <h2 className='text-4xl md:text-5xl font-bold text-intea-teal text-center mb-16'>
-          Como utilizar o Intea?
+        <h2 className='text-4xl md:text-6xl font-bold text-intea-teal text-center mb-16'>
+          Como utilizar o <span className='text-intea-teal-darker'>Intea?</span>
         </h2>
       </div>
 

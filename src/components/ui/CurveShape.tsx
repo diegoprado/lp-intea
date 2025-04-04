@@ -8,6 +8,7 @@ interface CurveShapeProps {
   fill?: string;
   height?: string | number;
   className?: string;
+  hasIconDown?: boolean;
 }
 
 /**
@@ -15,10 +16,11 @@ interface CurveShapeProps {
  * Usa arquivos SVG externos da pasta /public/svgs/
  */
 const CurveShape: React.FC<CurveShapeProps> = ({
-  type = 'up',
+  type = 'down',
   fill = 'white',
   height = '80px',
   className = '',
+  hasIconDown = false,
 }) => {
   const heightValue = typeof height === 'number' ? `${height}px` : height;
 
@@ -43,7 +45,9 @@ const CurveShape: React.FC<CurveShapeProps> = ({
         }}
       >
         <div className='w-full flex items-center justify-center'>
-          <Icon name='arrow-down' size='lg' color='white' className='mt-10' />
+          {hasIconDown && (
+            <Icon name='arrow-down' size='lg' color='white' className='mt-10' />
+          )}
         </div>
       </div>
     </div>
