@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&display=swap');
+@import 'tailwindcss';
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+
+@theme {
+  /* Colors */
+
+  --color-intea-teal-light: #22d4be;
+  --color-intea-teal: #0bb8a5;
+  --color-intea-teal-dark: #069487;
+  --color-intea-teal-darker: #09766e;
+  --color-intea-teal-darkest: #0f4e4a;
+
+  --color-intea-orange-light: #ffd9b3;
+  --color-intea-orange: #fb8b30;
+  --color-intea-orange-dark: #ea5000;
+  --color-intea-orange-darker: #c24200;
+  --color-intea-orange-darkest: #7c290c;
+
+  --color-intea-pink-light: #f466b1;
+  --color-intea-pink: #ec3d94;
+  --color-intea-pink-dark: #db1c71;
+  --color-intea-pink-darker: #be0f58;
+  --color-intea-pink-darkest: #831843;
+
+  --color-intea-violet-light: #9e80fa;
+  --color-intea-violet: #824ff6;
+  --color-intea-violet-dark: #742ded;
+  --color-intea-violet-darker: #661cd9;
+  --color-intea-violet-darkest: #471595;
+
+  --color-intea-gray-light: #fafaf9;
+
+  --font-family: 'Urbanist', sans-serif;
+}
+
+html,
+body {
+  font-family: var(--font-family);
+  background-color: --var(--color-intea-gray-light);
+}

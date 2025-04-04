@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intea - Teste do WhatsApp</title>
+
+    <!-- Meta tags básicas -->
+    <meta
+      name="description"
+      content="Esta é uma página de teste para o compartilhamento no WhatsApp"
+    />
+
+    <!-- Open Graph / WhatsApp -->
+    <meta property="og:title" content="Intea - Teste WhatsApp" />
+    <meta property="og:site_name" content="Intea" />
+    <meta
+      property="og:description"
+      content="Esta é uma página de teste para o compartilhamento no WhatsApp"
+    />
+    <meta property="og:image" content="/static/whatsapp-preview.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Imagem de teste da Intea" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.6;
+      }
+      h1 {
+        color: #00d1b2;
+        border-bottom: 2px solid #00d1b2;
+        padding-bottom: 10px;
+      }
+      .instructions {
+        background-color: #f8f8f8;
+        border-left: 4px solid #00d1b2;
+        padding: 15px;
+        margin: 20px 0;
+      }
+      code {
+        background-color: #eee;
+        padding: 2px 5px;
+        border-radius: 3px;
+      }
+      .image-preview {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        margin: 20px 0;
+      }
+      button {
+        background-color: #00d1b2;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+        background-color: #008b76;
+      }
+    </style>
+
+    <script>
+      // Atualizar dinamicamente a URL na tag og:url
+      document.addEventListener('DOMContentLoaded', function () {
+        const ogUrlMeta = document.querySelector('meta[property="og:url"]');
+        if (ogUrlMeta) {
+          ogUrlMeta.setAttribute('content', window.location.href);
+        }
+
+        // Atualizar a URL completa da imagem
+        const ogImageMeta = document.querySelector('meta[property="og:image"]');
+        if (ogImageMeta) {
+          const imageRelativePath = ogImageMeta.getAttribute('content');
+          if (imageRelativePath.startsWith('/')) {
+            const fullImageUrl = window.location.origin + imageRelativePath;
+            ogImageMeta.setAttribute('content', fullImageUrl);
+          }
+        }
+
+        // Mostrar a URL atual
+        const currentUrlElement = document.getElementById('current-url');
+        if (currentUrlElement) {
+          currentUrlElement.textContent = window.location.href;
+        }
+
+        // Mostrar a URL da imagem
+        const imageUrlElement = document.getElementById('image-url');
+        if (imageUrlElement && ogImageMeta) {
+          imageUrlElement.textContent = ogImageMeta.getAttribute('content');
+        }
+      });
+
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(
+          function () {
+            alert('URL copiada!');
+          },
+          function (err) {
+            console.error('Erro ao copiar: ', err);
+          }
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Teste de Compartilhamento no WhatsApp</h1>
+
+    <div class="instructions">
+      <h2>Como testar:</h2>
+      <ol>
+        <li>Compartilhe <strong>esta</strong> URL no WhatsApp</li>
+        <li>Verifique se a imagem e o texto aparecem corretamente na prévia</li>
+        <li>
+          Se não aparecer, clique no botão abaixo para limpar o cache e tente
+          novamente
+        </li>
+      </ol>
+    </div>
+
+    <p>
+      <strong>URL atual:</strong> <code id="current-url">carregando...</code>
+      <button
+        onclick="copyToClipboard(document.getElementById('current-url').textContent)"
+      >
+        Copiar
+      </button>
+    </p>
+
+    <p>
+      <strong>URL da imagem:</strong> <code id="image-url">carregando...</code>
+    </p>
+
+    <h2>Prévia da Imagem:</h2>
+    <img
+      src="/static/whatsapp-preview.jpg"
+      alt="Prévia do WhatsApp"
+      class="image-preview"
+    />
+
+    <h2>Não está funcionando?</h2>
+    <p>Execute no terminal o script de limpeza de cache:</p>
+    <pre><code>node scripts/update-og-cache.js</code></pre>
+
+    <p>Ou tente estas dicas:</p>
+    <ul>
+      <li>Compartilhe com um contato diferente</li>
+      <li>Limpe o cache do WhatsApp Web ou do aplicativo</li>
+      <li>Verifique se a URL do ngrok está correta</li>
+      <li>
+        Certifique-se de que o servidor está rodando com a opção
+        <code>--host</code>
+      </li>
+    </ul>
+  </body>
+</html>
