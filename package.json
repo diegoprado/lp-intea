@@ -12,6 +12,7 @@
     "dev:ngrok": "vite --host"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "@tailwindcss/vite": "^4.0.17",
     "@types/js-cookie": "^3.0.6",
     "i18next": "^24.2.3",

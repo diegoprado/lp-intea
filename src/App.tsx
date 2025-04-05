@@ -12,6 +12,7 @@ import PlatformBenefits from './sections/PlatformBenefits';
 import Features from './sections/Features';
 import Impact from './sections/Impact';
 import HowToUse from './sections/HowToUse';
+import Contact from './sections/Contact';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Features />
             <Impact />
             <HowToUse />
+            <Contact />
           </main>
           <Footer />
         </div>
