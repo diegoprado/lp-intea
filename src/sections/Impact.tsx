@@ -1,5 +1,4 @@
-import React from 'react';
-import Button from '../components/ui/Button';
+import ButtonLink from '@/components/ui/ButtonLink';
 
 const Impact = () => {
   return (
@@ -28,13 +27,14 @@ const Impact = () => {
               </p>
 
               <div className='flex justify-center lg:justify-start'>
-                <Button
+                <ButtonLink
+                  href='#contact'
                   variant='primary'
                   leftIcon='arrow-down'
                   className='text-lg'
                 >
                   Faça Download do App
-                </Button>
+                </ButtonLink>
               </div>
             </div>
           </div>

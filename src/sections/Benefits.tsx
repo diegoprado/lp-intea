@@ -1,6 +1,6 @@
 const Benefits = () => {
   return (
-    <section className='bg-intea-gray-light py-10 lg:py-0'>
+    <section className='bg-intea-gray-light py-10 lg:py-0' id='about-intea'>
       <div className='container mx-auto px-4 flex flex-col gap-20'>
         <div className='flex flex-col lg:flex-row gap-20 items-center justify-center'>
           <div className='flex flex-col items-start gap-8 bg-white rounded-4xl p-8 shadow-[0px_24px_48px_-12px_rgba(41,37,36,0.18)] w-full lg:w-6/12'>

@@ -6,7 +6,7 @@ const Contact = () => {
   const [state, handleSubmit] = useForm('xyzenvdz');
 
   return (
-    <section className='bg-intea-gray-light px-4 lg:px-0 py-16'>
+    <section className='bg-intea-gray-light px-4 lg:px-0 py-16' id='contact'>
       <div className='container mx-auto bg-intea-teal rounded-3xl relative overflow-hidden after:content-[] after:absolute after:w-[70%] after:h-[100%] after:right-[0] after:top-0 after:bg-[url(/images/hero-spheres.png)] bg-contain p-8 lg:p-16'>
         <div className='flex flex-col lg:flex-row gap-8 items-start lg:items-center relative z-10'>
           {/* Coluna do formulário */}

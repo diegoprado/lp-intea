@@ -35,10 +35,20 @@
   --font-family: 'Urbanist', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth; /* Adiciona scroll suave para âncoras */
+}
+
 html,
 body {
   font-family: var(--font-family);
   background-color: --var(--color-intea-gray-light);
+}
+
+/* Configuração de scroll suave para links com âncoras */
+a[href^='#'] {
+  scroll-margin-top: 100px; /* Espaço entre o topo da janela e o elemento de destino */
+  transition: all 0.3s ease;
 }
 
 /* Estilos para os campos de formulário */

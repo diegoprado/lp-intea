@@ -1,5 +1,5 @@
 import CurveShape from '../components/ui/CurveShape';
-import Button from '../components/ui/Button';
+import ButtonLink from '@/components/ui/ButtonLink';
 
 const Hero = () => {
   return (
@@ -28,25 +28,38 @@ const Hero = () => {
         <div className='flex flex-col lg:flex-row items-start lg:items-center justify-between'>
           <div className='mt-10 lg:mt-0 lg:w-7/12 text-white'>
             <h1 className='text-4xl lg:text-7xl font-bold mb-6'>
-              Gestão terapêuptica baseada em{' '}
-              <span className='text-intea-teal-darker'>ABA</span> para crianças
-              com <span className='text-intea-teal-darker'>autismo</span>.
+              Prontuário{' '}
+              <span className='text-intea-teal-darker'>
+                digital integrativo
+              </span>{' '}
+              para o desenvolvimento do{' '}
+              <span className='text-intea-teal-darker'>autista</span>.
             </h1>
 
             <p className='text-lg lg:text-2xl mb-8'>
-              Plataforma web especializada no registro de evolução, organização
-              da jornada do atendimento e comunicação da equipe terapêutica com
-              a família, a ecola e as operadoras de saúde.
+              Orienta a família e organiza as informações no enfrentamento dos
+              desafios apresentados pelo autismo. <br /> INTEA armazena
+              informações de saúde de um paciente
             </p>
 
             <div className='flex flex-col lg:flex-row lg:flex-wrap gap-4'>
-              <Button variant='secondary' leftIcon='plus' iconSize='sm'>
+              <ButtonLink
+                href='#about-intea'
+                variant='secondary'
+                leftIcon='plus'
+                iconSize='sm'
+              >
                 Conheça mais sobre o Intea
-              </Button>
+              </ButtonLink>
 
-              <Button variant='primary' leftIcon='arrow-down' iconSize='sm'>
+              <ButtonLink
+                href='#contact'
+                variant='primary'
+                leftIcon='arrow-down'
+                iconSize='sm'
+              >
                 Faça Download do App
-              </Button>
+              </ButtonLink>
             </div>
           </div>
 
