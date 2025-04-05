@@ -32,7 +32,6 @@ function App() {
             <Features />
             <Impact />
             <HowToUse />
-            {/* Outras seções serão adicionadas aqui */}
           </main>
           <Footer />
         </div>

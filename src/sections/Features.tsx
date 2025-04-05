@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Button from '../components/ui/Button';
 import Icon from '@/components/ui/Icon';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Categorias das funcionalidades
 type FeatureCategory =
@@ -193,7 +194,7 @@ const FeatureCard: React.FC<{ feature: FeatureCard }> = ({ feature }) => {
     <div
       className={`${
         categoryColorMap[feature.category]
-      } rounded-3xl p-8 text-white shadow-lg h-full relative overflow-hidden after:content-[url("/images/benefits-card/pattern.svg")] after:absolute after:w-full after:left-0 after:top-0`}
+      } rounded-3xl p-8 text-white shadow-lg h-full relative overflow-hidden after:content-[url("/images/benefits-card/pattern.svg")] after:absolute after:w-full after:left-0 after:top-0 min-h-[375px] lg:min-h-[initial]`}
     >
       <div className='relative z-10'>
         <h3 className='text-5xl md:text-6xl font-bold mb-6'>
@@ -209,31 +210,44 @@ const FeatureCard: React.FC<{ feature: FeatureCard }> = ({ feature }) => {
 };
 
 const Features = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [offset, setOffset] = useState(16);
+
+  useEffect(() => {
+    const updateOffset = () => {
+      if (containerRef.current) {
+        const left = containerRef.current.getBoundingClientRect().left;
+        setOffset(left);
+      }
+    };
+
+    updateOffset();
+    window.addEventListener('resize', updateOffset);
+    return () => window.removeEventListener('resize', updateOffset);
+  }, []);
+
   const [activeCategory, setActiveCategory] =
     useState<FeatureCategory>('dados');
 
-  // Filtrar cards pela categoria selecionada
   const filteredFeatures = featuresData.filter(
     (feature) => feature.category === activeCategory
   );
 
   return (
-    <section className='py-24 bg-intea-gray-light'>
-      <div className='container mx-auto px-4'>
-        {/* Título e descrição */}
-        <div className='text-center mb-16'>
+    <section className='pt-10 pb-20 lg:pt-24 lg:pb-24 bg-intea-gray-light'>
+      <div className='container mx-auto lg:px-4'>
+        <div className='text-center mb-16 px-4'>
           <h2 className='text-5xl 2xl:text-6xl font-bold text-intea-teal-dark mb-6'>
             Principais Funcionalidade
           </h2>
-          <p className='text-intea-teal-dark text-2xl max-w-4xl mx-auto'>
+          <p className='text-intea-teal-dark text-xl max-w-4xl mx-auto'>
             Conheça as funcionalidades do INTEA, que facilitam o acompanhamento
             do desenvolvimento de pacientes com TEA, promovendo integração e
             eficiência no tratamento.
           </p>
         </div>
 
-        {/* Filtros - aba de navegação arredondada */}
-        <div className='flex justify-center mb-16'>
+        <div className='hidden lg:flex justify-center mb-16'>
           <div className='bg-intea-teal-dark rounded-full flex flex-wrap gap-2 shadow-md inline-flex p-5'>
             {categories.map((category) => (
               <Button
@@ -252,10 +266,29 @@ const Features = () => {
         </div>
 
         {/* Grid de cards */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className='hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {filteredFeatures.map((feature) => (
             <FeatureCard key={feature.id} feature={feature} />
           ))}
+        </div>
+
+        <div className='lg:hidden'>
+          <Swiper
+            spaceBetween={24}
+            slidesPerView={'auto'}
+            slidesOffsetBefore={offset}
+            slidesOffsetAfter={offset}
+            className='pb-16'
+          >
+            {featuresData.map((feature, index) => (
+              <SwiperSlide
+                key={index}
+                className='!w-[85%] md:!w-[70%] lg:!w-[60%]'
+              >
+                <FeatureCard key={feature.id} feature={feature} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>

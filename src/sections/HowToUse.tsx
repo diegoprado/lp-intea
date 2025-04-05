@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
+import isMobile from '@/utils/isMobile';
 
 // Interface para os passos
 interface Step {
@@ -90,13 +91,15 @@ const StepCard: React.FC<StepCardProps> = ({ step }) => {
     <div
       className={`${step.color} rounded-3xl p-8 text-white shadow-lg h-full relative overflow-hidden flex min-h-[550px]`}
     >
-      <div className='relative z-10 w-1/2 pr-4 flex flex-col gap-6'>
+      <div className='relative z-10 w-full lg:w-1/2 pr-4 flex flex-col gap-2 lg:gap-6'>
         <h3 className='text-5xl md:text-7xl font-bold mb-6'>{step.number}</h3>
-        <h4 className='text-5xl font-bold mb-4'>{step.title}</h4>
+        <h4 className='text-3xl md:text-5xl font-bold mb-4'>{step.title}</h4>
 
-        <p className='text-2xl leading-relaxed'>{step.description}</p>
+        <p className='text-lg md:text-2xl font-medium leading-relaxed'>
+          {step.description}
+        </p>
       </div>
-      <div className='w-1/2 flex items-center justify-center absolute right-0 top-0'>
+      <div className='hidden w-1/2 lg:flex items-center justify-center absolute right-0 top-0'>
         <img
           src={step.illustration}
           alt={`Passo ${step.number}`}
@@ -110,7 +113,7 @@ const StepCard: React.FC<StepCardProps> = ({ step }) => {
 // Componente principal
 const HowToUse: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [offset, setOffset] = useState(16); // valor padrão do px-4
+  const [offset, setOffset] = useState(16);
 
   useEffect(() => {
     const updateOffset = () => {
@@ -127,35 +130,39 @@ const HowToUse: React.FC = () => {
 
   return (
     <section className='py-24 bg-intea-gray-light'>
-      <div ref={containerRef} className='container mx-auto px-4 mb-8'>
+      <div
+        ref={isMobile() ? null : containerRef}
+        className='container mx-auto px-4 mb-8 '
+      >
         <h2 className='text-4xl md:text-6xl font-bold text-intea-teal text-center mb-16'>
           Como utilizar o <span className='text-intea-teal-darker'>Intea?</span>
         </h2>
       </div>
 
-      {/* Swiper fora do container, mas alinhando com ele via JS */}
-      <Swiper
-        modules={[Pagination]}
-        spaceBetween={24}
-        slidesPerView={'auto'}
-        slidesOffsetBefore={offset}
-        slidesOffsetAfter={offset}
-        pagination={{
-          clickable: true,
-          bulletClass: 'swiper-pagination-bullet',
-          bulletActiveClass: 'swiper-pagination-bullet-active',
-        }}
-        className='pb-16'
-      >
-        {stepsData.map((step) => (
-          <SwiperSlide
-            key={step.id}
-            className='!w-[85%] md:!w-[70%] lg:!w-[60%]'
-          >
-            <StepCard step={step} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className='w-full overflow-visible'>
+        <Swiper
+          modules={[Pagination]}
+          spaceBetween={24}
+          slidesPerView={'auto'}
+          slidesOffsetBefore={offset}
+          slidesOffsetAfter={offset}
+          pagination={{
+            clickable: true,
+            bulletClass: 'swiper-pagination-bullet',
+            bulletActiveClass: 'swiper-pagination-bullet-active',
+          }}
+          className='pb-16'
+        >
+          {stepsData.map((step, index) => (
+            <SwiperSlide
+              key={index}
+              className='!w-[85%] md:!w-[70%] lg:!w-[60%]'
+            >
+              <StepCard step={step} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
       <div className='flex justify-center mt-4'>
         <div className='swiper-pagination'></div>
@@ -164,6 +171,11 @@ const HowToUse: React.FC = () => {
       <style
         dangerouslySetInnerHTML={{
           __html: `
+
+      .swiper-slide {
+        height: auto;
+        display: flex;
+      }
       .swiper-pagination {
         position: relative;
         bottom: 0;

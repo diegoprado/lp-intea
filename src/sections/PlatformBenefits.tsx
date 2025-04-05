@@ -165,29 +165,30 @@ const PlatformBenefits = () => {
             <BenefitCard key={index} {...card} isEven={index % 2 === 1} />
           ))}
         </div>
-
-        <Swiper
-          modules={[Pagination]}
-          spaceBetween={24}
-          slidesPerView={'auto'}
-          slidesOffsetBefore={offset}
-          slidesOffsetAfter={offset}
-          pagination={{
-            clickable: true,
-            bulletClass: 'swiper-pagination-bullet',
-            bulletActiveClass: 'swiper-pagination-bullet-active',
-          }}
-          className='pb-16'
-        >
-          {cards.map((card, index) => (
-            <SwiperSlide
-              key={index}
-              className='!w-[85%] md:!w-[70%] lg:!w-[60%]'
-            >
-              <BenefitCard key={index} {...card} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className='lg:hidden'>
+          <Swiper
+            modules={[Pagination]}
+            spaceBetween={24}
+            slidesPerView={'auto'}
+            slidesOffsetBefore={offset}
+            slidesOffsetAfter={offset}
+            pagination={{
+              clickable: true,
+              bulletClass: 'swiper-pagination-bullet',
+              bulletActiveClass: 'swiper-pagination-bullet-active',
+            }}
+            className='pb-16'
+          >
+            {cards.map((card, index) => (
+              <SwiperSlide
+                key={index}
+                className='!w-[85%] md:!w-[70%] lg:!w-[60%]'
+              >
+                <BenefitCard key={index} {...card} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </section>
   );
