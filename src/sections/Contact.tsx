@@ -32,9 +32,11 @@ const Contact = () => {
                   color='white'
                   className='mb-4'
                 />
-                <h3 className='text-2xl font-bold mb-2'>Mensagem enviada!</h3>
+                <h3 className='text-2xl font-bold mb-2'>
+                  Obrigado por se inscrever!
+                </h3>
                 <p className='text-lg'>
-                  Obrigado pelo seu contato. Retornaremos em breve.
+                  Você receberá um e-mail com mais informações sobre o Intea.
                 </p>
               </div>
             ) : (
