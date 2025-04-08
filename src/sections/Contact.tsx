@@ -12,16 +12,14 @@ const Contact = () => {
           {/* Coluna do formulário */}
           <div className='lg:w-1/2 text-white'>
             <h2 className='text-4xl md:text-5xl font-bold mb-3'>
-              Alguma <span className='text-intea-teal-darker'>dúvida?</span>
+              <span className='text-intea-teal-darker'>Intea</span> está
+              chegando!
             </h2>
-            <h3 className='text-4xl md:text-5xl font-bold mb-6'>
-              Entre em contato{' '}
-              <span className='text-intea-teal-darker'>conosco!</span>
-            </h3>
 
             <p className='text-xl mb-8'>
-              Profissionais e famílias usam a plataforma para melhorar a gestão
-              terapêutica de forma eficiente e colaborativa.
+              Nosso aplicativo está quase pronto para transformar a forma como
+              profissionais e famílias gerenciam o cuidado terapêutico. Fique
+              por dentro e seja o primeiro(a) a saber!
             </p>
 
             {state.succeeded ? (
@@ -36,7 +34,11 @@ const Contact = () => {
                   Obrigado por se inscrever!
                 </h3>
                 <p className='text-lg'>
-                  Você receberá um e-mail com mais informações sobre o Intea.
+                  Você receberá um e-mail com mais informações quando o{' '}
+                  <span className='font-bold text-intea-teal-darker'>
+                    Intea
+                  </span>{' '}
+                  for lançado.
                 </p>
               </div>
             ) : (
@@ -115,30 +117,6 @@ const Contact = () => {
                   />
                 </div>
 
-                {/* Mensagem */}
-                <div className='flex flex-col gap-2'>
-                  <label htmlFor='message'>Sua Mensagem</label>
-                  <div className='relative'>
-                    <div className='absolute left-4 top-4 text-gray-400'>
-                      <Icon name='chat' size='sm' color='black' />
-                    </div>
-                    <textarea
-                      id='message'
-                      name='message'
-                      rows={5}
-                      className='w-full rounded-3xl py-4 px-12 text-black bg-white/90'
-                      placeholder='Escreva aqui...'
-                      required
-                    />
-                  </div>
-                  <ValidationError
-                    prefix='Mensagem'
-                    field='message'
-                    errors={state.errors}
-                    className='text-red-300 text-sm'
-                  />
-                </div>
-
                 <div className='mt-6'>
                   <Button
                     type='submit'
@@ -146,7 +124,7 @@ const Contact = () => {
                     className='submit-button w-full md:w-auto py-4 px-8 text-lg'
                     disabled={state.submitting}
                   >
-                    {state.submitting ? 'Enviando...' : 'Enviar mensagem'}
+                    {state.submitting ? 'Enviando...' : 'Quero ser avisado'}
                   </Button>
                 </div>
               </form>
