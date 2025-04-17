@@ -1,5 +1,190 @@
 {
-  "welcome": "Bem-vindo",
-  "changeLanguage": "Mudar idioma",
-  "description": "Conteúdo em português"
+  "hero": {
+    "title": "Prontuário <highlight>digital <break/>integrativo</highlight> para o desenvolvimento do <highlight>autista</highlight>.",
+    "description": "Orienta a família e organiza as informações no enfrentamento dos desafios apresentados pelo autismo. <br /> Intea armazena informações de saúde de um paciente",
+    "buttons": {
+      "about": "Conheça mais sobre o Intea",
+      "donwload": "Faça o download do app"
+    }
+  },
+  "benefits": {
+    "title": "Nossos <highlight>Benefícios</highlight>",
+    "description": "O <highlight>Intea</highlight> é uma plataforma digital inovadora que facilita o registro de evolução e a comunicação entre profissionais e famílias no atendimento a crianças com TEA. Integrando informações de saúde e intervenções terapêuticas, o Intea promove um acompanhamento contínuo e personalizado, garantindo colaboração entre todos os envolvidos no desenvolvimento do paciente."
+  },
+  "platformBenefits": {
+    "cards": [
+      {
+        "title": "Para Pacientes",
+        "color": "teal",
+        "subtitle1": "Terapia Individualizada",
+        "description1": "Acompanhamento personalizado, com foco nas necessidades específicas de cada indivíduo.",
+        "subtitle2": "Monitoramento Contínuo",
+        "description2": "Registro detalhado do progresso, permitindo ajustes rápidos nas intervenções.",
+        "icon": "user-single",
+        "illustration": "/images/plafform-benefits/illustration-1.svg"
+      },
+      {
+        "title": "Para Famílias",
+        "color": "orange",
+        "subtitle1": "Orientação e Empoderamento",
+        "description1": "Acesso a informações claras e organizadas, facilitando a tomada de decisões.",
+        "subtitle2": "Facilidade de Uso",
+        "description2": "Registro detalhado do progresso, permitindo ajustes rápidos nas intervenções.",
+        "icon": "user-triple",
+        "illustration": "/images/plafform-benefits/illustration-2.svg"
+      },
+      {
+        "title": "Para Profissionais",
+        "color": "pink",
+        "subtitle1": "Integração e Colaboração",
+        "description1": "Ferramentas para trabalho em equipe, com compartilhamento de informações em tempo real.",
+        "subtitle2": "Eficiência no Atendimento",
+        "description2": "Redução de tempo gasto com burocracia e organização de documentos.",
+        "icon": "hospital",
+        "illustration": "/images/plafform-benefits/illustration-3.svg"
+      },
+      {
+        "title": "Para a Sociedade",
+        "color": "violet",
+        "subtitle1": "Inclusão e Acesso",
+        "description1": "Promoção da garantia de direitos e acesso a serviços para pessoas com autismo.",
+        "subtitle2": "Sustentabilidade",
+        "description2": "Redução do impacto ambiental com a eliminação do uso de papel.",
+        "icon": "user-triple",
+        "illustration": "/images/plafform-benefits/illustration-4.svg"
+      }
+    ]
+  },
+  "features": {
+    "title": "Principais Funcionalidades",
+    "description": "Conheça as funcionalidades do Intea, que facilitam o acompanhamento do desenvolvimento de pacientes com TEA, promovendo integração e eficiência no tratamento.",
+    "cards": [
+      {
+        "id": 1,
+        "number": "1.",
+        "title": "Anamneses e Laudos",
+        "description": "Registro completo do histórico médico, incluindo diagnósticos, avaliações e relatórios.",
+        "category": "dados"
+      },
+      {
+        "id": 2,
+        "number": "2.",
+        "title": "Prescrições Terapêuticas",
+        "description": "Armazenamento de planos de tratamento, medicamentos, terapias e intervenções recomendadas.",
+        "category": "dados"
+      },
+      {
+        "id": 3,
+        "number": "3.",
+        "title": "Dados de Crescimento e Evolução",
+        "description": "Curvas de crescimento, gráficos de desenvolvimento e indicadores de progresso.",
+        "category": "dados"
+      },
+      {
+        "id": 4,
+        "number": "4.",
+        "title": "Registro de Metas e Dificuldades",
+        "description": "Definição de objetivos terapêuticos e educacionais, com monitoramento contínuo.",
+        "category": "desenvolvimento"
+      },
+      {
+        "id": 5,
+        "number": "5.",
+        "title": "Histórico do Paciente",
+        "description": "Acesso rápido a todas as informações atualizadas, permitindo uma visão longitudinal do desenvolvimento.",
+        "category": "desenvolvimento"
+      },
+      {
+        "id": 6,
+        "number": "6.",
+        "title": "Devolutivas Automáticas",
+        "description": "Geração de relatórios e gráficos evolutivos para facilitar a análise do progresso.",
+        "category": "desenvolvimento"
+      },
+      {
+        "id": 7,
+        "number": "7.",
+        "title": "Elaboração Personalizada",
+        "description": "Ferramentas para criação de planos de intervenção individualizados, considerando as necessidades específicas do paciente.",
+        "category": "plano"
+      },
+      {
+        "id": 8,
+        "number": "8.",
+        "title": "Habilidades a Serem Desenvolvidas",
+        "description": "Identificação de áreas de foco, como comunicação, habilidades sociais, motoras e cognitivas.",
+        "category": "plano"
+      },
+      {
+        "id": 9,
+        "number": "9.",
+        "title": "Acompanhamento de Metas",
+        "description": "Conexão entre terapeutas, médicos, professores e cuidadores, permitindo a troca de informações e estratégias.",
+        "category": "integracao"
+      },
+      {
+        "id": 10,
+        "number": "10.",
+        "title": "Estratégias Interdisciplinares",
+        "description": "Sugestões de abordagens integradas, baseadas nas melhores práticas e nas necessidades do paciente.",
+        "category": "integracao"
+      },
+      {
+        "id": 11,
+        "number": "11.",
+        "title": "Acesso a Informações de Saúde",
+        "description": "Dados atualizados sobre problemas de saúde, medicamentos e intervenções em andamento.",
+        "category": "direitos"
+      },
+      {
+        "id": 12,
+        "number": "12.",
+        "title": "Prescrições",
+        "description": "Funcionalidade para prescrições digitais de medicamentos e terapias, com alertas e lembretes para famílias e profissionais.",
+        "category": "direitos"
+      },
+      {
+        "id": 13,
+        "number": "13.",
+        "title": "Facilitação de Direitos",
+        "description": "Informações sobre políticas públicas, benefícios e recursos disponíveis para pessoas com autismo.",
+        "category": "direitos"
+      },
+      {
+        "id": 14,
+        "number": "14.",
+        "title": "Redução de Custos",
+        "description": "Eliminação do uso de papel e armazenamento físico, com todos os dados guardados em nuvem.",
+        "category": "sustentabilidade"
+      },
+      {
+        "id": 15,
+        "number": "15.",
+        "title": "Compartilhamento Seguro",
+        "description": "Troca de informações entre profissionais e famílias com criptografia e proteção de dados, em conformidade com a LGPD (Lei Geral de Proteção de Dados).",
+        "category": "sustentabilidade"
+      }
+    ]
+  },
+  "impact": {
+    "title": "<highlight>Impacto</highlight> Esperado",
+    "description1": "O Intea pode transformar o cuidado de pacientes autistas, oferecendo uma solução integrada que beneficia todos os envolvidos. Ao centralizar informações e promover intervenções personalizadas, o aplicativo melhora a qualidade de vida dos pacientes e suas famílias.",
+    "description2": "O Intea é uma solução moderna para enfrentar os desafios do autismo, promovendo inclusão, organização e desenvolvimento, sendo essencial para famílias e profissionais.",
+    "button": "Faça Download do App"
+  },
+  "howToUse": {
+    "title": "Como Utilizar o <highlight>Intea?</highlight>"
+  },
+  "contact": {
+    "title": "Intea está <highlight>chegando!</highlight>",
+    "description": "Nosso aplicativo está quase pronto para transformar a forma como profissionais e famílias gerenciam o cuidado terapêutico. Fique por dentro e seja o primeiro(a) a saber!",
+    "button": "Faça Download do App",
+    "success": {
+      "title": "Obrigado por se inscrever!",
+      "description": "Você receberá um e-mail com mais informações quando o <highlight>Intea</highlight> for lançado."
+    }
+  },
+  "footer": {
+    "copyright": "© {{currentYear}} Intea. Todos direitos reservados."
+  }
 }

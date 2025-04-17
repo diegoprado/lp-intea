@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import ButtonLink from '@/components/ui/ButtonLink';
+import { useTranslation } from 'react-i18next';
 
 interface BenefitCardProps {
   title: string;
@@ -64,6 +65,10 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
   const bgColor = bgColorMap[color] || 'intea-teal';
   const buttonVariant = buttonVariantMap[color];
 
+  const { i18n } = useTranslation();
+
+  const currentLanguage = i18n.language;
+
   return (
     <div
       className={`relative ${
@@ -116,7 +121,9 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
             rightIcon='arrow-right'
             className='mt-8'
           >
-            Veja mais benefícios {title.toLowerCase()}
+            {currentLanguage === 'pt'
+              ? `Veja mais benefícios ${title.toLowerCase()}`
+              : `See more benefits ${title.toLowerCase()}`}
           </ButtonLink>
         </div>
       </div>
@@ -138,60 +145,21 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
   );
 };
 
-const cards = [
-  {
-    title: 'Para Pacientes',
-    color: 'teal',
-    subtitle1: 'Terapia Individualizada',
-    description1:
-      'Acompanhamento personalizado, com foco nas necessidades específicas de cada indivíduo.',
-    subtitle2: 'Monitoramento Contínuo',
-    description2:
-      'Registro detalhado do progresso, permitindo ajustes rápidos nas intervenções.',
-    icon: 'user-single',
-    illustration: '/images/plafform-benefits/illustration-1.svg',
-  },
-  {
-    title: 'Para Famílias',
-    color: 'orange',
-    subtitle1: 'Orientação e Empoderamento',
-    description1:
-      'Acesso a informações claras e organizadas, facilitando a tomada de decisões.',
-    subtitle2: 'Facilidade de Uso',
-    description2:
-      'Registro detalhado do progresso, permitindo ajustes rápidos nas intervenções.',
-    icon: 'user-triple',
-    illustration: '/images/plafform-benefits/illustration-2.svg',
-  },
-  {
-    title: 'Para Profissionais',
-    color: 'pink',
-    subtitle1: 'Integração e Colaboração',
-    description1:
-      'Ferramentas para trabalho em equipe, com compartilhamento de informações em tempo real.',
-    subtitle2: 'Eficiência no Atendimento',
-    description2:
-      'Redução de tempo gasto com burocracia e organização de documentos.',
-    icon: 'hospital',
-    illustration: '/images/plafform-benefits/illustration-3.svg',
-  },
-  {
-    title: 'Para a Sociedade',
-    color: 'violet',
-    subtitle1: 'Inclusão e Acesso',
-    description1:
-      'Promoção da garantia de direitos e acesso a serviços para pessoas com autismo.',
-    subtitle2: 'Sustentabilidade',
-    description2:
-      'Redução do impacto ambiental com a eliminação do uso de papel.',
-    icon: 'user-triple',
-    illustration: '/images/plafform-benefits/illustration-4.svg',
-  },
-];
-
 const PlatformBenefits = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(16);
+
+  const { t } = useTranslation();
+  const cards = t('platformBenefits.cards', { returnObjects: true }) as Array<{
+    title: string;
+    color: string;
+    subtitle1: string;
+    description1: string;
+    subtitle2: string;
+    description2: string;
+    icon: string;
+    illustration: string;
+  }>;
 
   useEffect(() => {
     const updateOffset = () => {

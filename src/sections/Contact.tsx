@@ -1,9 +1,12 @@
 import { useForm, ValidationError } from '@formspree/react';
 import Button from '../components/ui/Button';
 import Icon from '../components/ui/Icon';
-
+import { Trans, useTranslation } from 'react-i18next';
+import i18n from '@/i18n';
 const Contact = () => {
   const [state, handleSubmit] = useForm('xyzenvdz');
+  const { t } = useTranslation();
+  const isPt = i18n.language === 'pt';
 
   return (
     <section className='bg-intea-gray-light px-4 lg:px-0 py-16' id='contact'>
@@ -12,15 +15,15 @@ const Contact = () => {
           {/* Coluna do formulário */}
           <div className='lg:w-1/2 text-white'>
             <h2 className='text-4xl md:text-5xl font-bold mb-3'>
-              <span className='text-intea-teal-darker'>Intea</span> está
-              chegando!
+              <Trans
+                i18nKey='contact.title'
+                components={{
+                  highlight: <span className='text-intea-teal-darker' />,
+                }}
+              />
             </h2>
 
-            <p className='text-xl mb-8'>
-              Nosso aplicativo está quase pronto para transformar a forma como
-              profissionais e famílias gerenciam o cuidado terapêutico. Fique
-              por dentro e seja o primeiro(a) a saber!
-            </p>
+            <p className='text-xl mb-8'>{t('contact.description')}</p>
 
             {state.succeeded ? (
               <div className='bg-intea-teal-lighter/20 rounded-2xl p-8 text-center'>
@@ -31,14 +34,17 @@ const Contact = () => {
                   className='mb-4'
                 />
                 <h3 className='text-2xl font-bold mb-2'>
-                  Obrigado por se inscrever!
+                  {t('contact.success.title')}
                 </h3>
                 <p className='text-lg'>
-                  Você receberá um e-mail com mais informações quando o{' '}
-                  <span className='font-bold text-intea-teal-darker'>
-                    Intea
-                  </span>{' '}
-                  for lançado.
+                  <Trans
+                    i18nKey='contact.success.description'
+                    components={{
+                      highlight: (
+                        <span className='font-bold text-intea-teal-darker' />
+                      ),
+                    }}
+                  />
                 </p>
               </div>
             ) : (
@@ -58,12 +64,12 @@ const Contact = () => {
                       type='text'
                       name='name'
                       className='w-full rounded-full py-4 px-12 text-black bg-white/90'
-                      placeholder='Nome'
+                      placeholder={isPt ? 'Nome' : 'Name'}
                       required
                     />
                   </div>
                   <ValidationError
-                    prefix='Nome'
+                    prefix={isPt ? 'Nome' : 'Name'}
                     field='name'
                     errors={state.errors}
                     className='text-red-300 text-sm'
@@ -72,7 +78,9 @@ const Contact = () => {
 
                 {/* Email */}
                 <div className='flex flex-col gap-2'>
-                  <label htmlFor='email'>Seu Email</label>
+                  <label htmlFor='email'>
+                    {isPt ? 'Seu Email' : 'Your Email'}
+                  </label>
                   <div className='relative'>
                     <div className='absolute left-4 top-1/2 -translate-y-1/2 text-gray-400'>
                       <Icon name='email' size='sm' color='black' />
@@ -82,12 +90,12 @@ const Contact = () => {
                       type='email'
                       name='email'
                       className='w-full rounded-full py-4 px-12 text-black bg-white/90'
-                      placeholder='Email'
+                      placeholder={isPt ? 'Email' : 'Email'}
                       required
                     />
                   </div>
                   <ValidationError
-                    prefix='Email'
+                    prefix={isPt ? 'Email' : 'Email'}
                     field='email'
                     errors={state.errors}
                     className='text-red-300 text-sm'
@@ -96,7 +104,9 @@ const Contact = () => {
 
                 {/* Telefone */}
                 <div className='flex flex-col gap-2'>
-                  <label htmlFor='phone'>Seu Telefone</label>
+                  <label htmlFor='phone'>
+                    {isPt ? 'Seu Telefone' : 'Your Phone'}
+                  </label>
                   <div className='relative'>
                     <div className='absolute left-4 top-1/2 -translate-y-1/2 text-gray-400'>
                       <Icon name='phone' size='sm' color='black' />
@@ -106,11 +116,11 @@ const Contact = () => {
                       type='tel'
                       name='phone'
                       className='w-full rounded-full py-4 px-12 text-black bg-white/90'
-                      placeholder='Telefone'
+                      placeholder={isPt ? 'Telefone' : 'Phone'}
                     />
                   </div>
                   <ValidationError
-                    prefix='Telefone'
+                    prefix={isPt ? 'Telefone' : 'Phone'}
                     field='phone'
                     errors={state.errors}
                     className='text-red-300 text-sm'
@@ -124,7 +134,13 @@ const Contact = () => {
                     className='submit-button w-full md:w-auto py-4 px-8 text-lg'
                     disabled={state.submitting}
                   >
-                    {state.submitting ? 'Enviando...' : 'Quero ser avisado'}
+                    {state.submitting
+                      ? isPt
+                        ? 'Enviando...'
+                        : 'Sending...'
+                      : isPt
+                      ? 'Quero ser avisado'
+                      : 'I want to be notified'}
                   </Button>
                 </div>
               </form>

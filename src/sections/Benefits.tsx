@@ -1,3 +1,5 @@
+import { Trans } from 'react-i18next';
+
 const Benefits = () => {
   return (
     <section
@@ -10,20 +12,25 @@ const Benefits = () => {
             <div className='flex flex-col items-start gap-8 bg-white rounded-4xl py-16 px-10 shadow-[0px_24px_48px_-12px_rgba(41,37,36,0.18)] w-full lg:max-w-[575px] 2xl:max-w-[750px] 3xl:max-w-[1200px]'>
               <div className='flex flex-col gap-10'>
                 <h2 className='text-4xl lg:text-5xl 2xl:text-7xl font-bold text-intea-teal-dark'>
-                  Nossos{' '}
-                  <span className='text-intea-teal-darker'>Benefícios</span>.
+                  <Trans
+                    i18nKey='benefits.title'
+                    ns='common'
+                    components={{
+                      highlight: <span className='text-intea-teal-darkest' />,
+                      break: <br />,
+                    }}
+                  />
                 </h2>
 
                 <p className='text-intea-teal-dark text-xl 2xl:text-2xl font-medium'>
-                  O <span className='text-intea-teal-darker'>Intea</span> é uma
-                  plataforma digital inovadora que facilita o registro de
-                  evolução e a comunicação entre profissionais e famílias no
-                  atendimento a crianças com TEA. Integrando informações de
-                  saúde e intervenções terapêuticas, o{' '}
-                  <span className='text-intea-teal-darker'>Intea</span> promove
-                  um acompanhamento contínuo e personalizado, garantindo
-                  colaboração entre todos os envolvidos no desenvolvimento do
-                  paciente.
+                  <Trans
+                    i18nKey='benefits.description'
+                    ns='common'
+                    components={{
+                      highlight: <span className='text-intea-teal-darkest' />,
+                      break: <br />,
+                    }}
+                  />
                 </p>
               </div>
             </div>

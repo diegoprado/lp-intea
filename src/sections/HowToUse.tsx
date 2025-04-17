@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import isMobile from '@/utils/isMobile';
+import { Trans } from 'react-i18next';
+import i18n from '@/i18n';
 
 // Interface para os passos
 interface Step {
@@ -14,8 +16,7 @@ interface Step {
   illustration: string;
 }
 
-// Mock de dados para o carrossel
-const stepsData: Step[] = [
+const stepsDataPT: Step[] = [
   {
     id: 1,
     number: '1.',
@@ -81,7 +82,68 @@ const stepsData: Step[] = [
   },
 ];
 
-// Componente do card
+const stepsDataEN: Step[] = [
+  {
+    id: 1,
+    number: '1.',
+    title: (
+      <>
+        Create your{' '}
+        <span className='text-intea-teal-darkest'>free account</span> in Intea!
+      </>
+    ),
+    description:
+      "Download Intea on your device (Android/iOS) and create a free account. Fill in the guardian's details, then complete the registration with the child’s information and required permissions.",
+    color: 'bg-intea-teal-dark',
+    textColor: 'text-white',
+    illustration: '/images/how-to-work/create.png',
+  },
+  {
+    id: 2,
+    number: '2.',
+    title: (
+      <>
+        Connect with <span className='text-intea-orange-darkest'>clinics</span>{' '}
+        and <span className='text-intea-orange-darkest'>professionals</span>.
+      </>
+    ),
+    description:
+      'Search for the clinic or professional who cares for your child and send an invitation to connect. Once the invitation is accepted, you will be able to securely and privately access the patient’s journey information.',
+    color: 'bg-intea-orange-dark',
+    textColor: 'text-white',
+    illustration: '/images/how-to-work/connect.png',
+  },
+  {
+    id: 3,
+    number: '3.',
+    title: (
+      <>
+        Track <span className='text-intea-pink-darkest'>development</span>.
+      </>
+    ),
+    description:
+      'Within the secure environment, professionals will record all relevant data (anamneses, evaluations, intervention plans). You will be able to access this information directly through the app.',
+    color: 'bg-intea-pink-dark',
+    textColor: 'text-white',
+    illustration: '/images/how-to-work/follow.png',
+  },
+  {
+    id: 4,
+    number: '4.',
+    title: (
+      <>
+        <span className='text-intea-violet-darkest'>Maximize</span> the
+        patient's development.
+      </>
+    ),
+    description:
+      'The school and family can also participate, receiving guidance and feedback directly through the app. INTEA facilitates collaboration among all parties involved, promoting the child’s continuous development.',
+    color: 'bg-intea-violet-dark',
+    textColor: 'text-white',
+    illustration: '/images/how-to-work/maximize.png',
+  },
+];
+
 interface StepCardProps {
   step: Step;
 }
@@ -115,6 +177,10 @@ const HowToUse: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(16);
 
+  const currentLanguage = i18n.language;
+
+  const stepsData = currentLanguage === 'pt' ? stepsDataPT : stepsDataEN;
+
   useEffect(() => {
     const updateOffset = () => {
       if (containerRef.current) {
@@ -135,7 +201,12 @@ const HowToUse: React.FC = () => {
         className='container mx-auto px-4 mb-8 '
       >
         <h2 className='text-4xl md:text-6xl font-bold text-intea-teal text-center mb-16'>
-          Como utilizar o <span className='text-intea-teal-darker'>Intea?</span>
+          <Trans
+            i18nKey='howToUse.title'
+            components={{
+              highlight: <span className='text-intea-teal-darker' />,
+            }}
+          />
         </h2>
       </div>
 

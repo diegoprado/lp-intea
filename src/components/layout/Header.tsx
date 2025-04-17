@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import ButtonLink from '../ui/ButtonLink';
+import ToggleLanguage from '../ToggleLanguage';
+// import ButtonLink from '../ui/ButtonLink';
 
 interface HeaderProps {
   className?: string;
 }
 
-interface NavItem {
-  label: string;
-  icon: string;
-  href: string;
-}
+// interface NavItem {
+//   label: string;
+//   icon: string;
+//   href: string;
+// }
 
 /**
  * Componente de cabeçalho principal do site
@@ -49,13 +50,13 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
   }, [prevScrollPos]);
 
   // Itens de navegação principal
-  const navItems: NavItem[] = [
-    { label: 'Sobre nós', icon: 'info', href: '/' },
-    { label: 'Famílias', icon: 'user-triple', href: '/familias' },
-    { label: 'Profissionais', icon: 'user-triple', href: '/profissionais' },
-    { label: 'Clínicas', icon: 'hospital', href: '/clinicas' },
-    { label: 'Blog', icon: 'chat', href: '/blog' },
-  ];
+  // const navItems: NavItem[] = [
+  //   { label: 'Sobre nós', icon: 'info', href: '/' },
+  //   { label: 'Famílias', icon: 'user-triple', href: '/familias' },
+  //   { label: 'Profissionais', icon: 'user-triple', href: '/profissionais' },
+  //   { label: 'Clínicas', icon: 'hospital', href: '/clinicas' },
+  //   { label: 'Blog', icon: 'chat', href: '/blog' },
+  // ];
 
   return (
     <header
@@ -115,7 +116,7 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
 
             {/* Menu mobile e seletor de idioma */}
             {/* <LanguageSwitcher /> */}
-            {/* <ToggleLanguage /> */}
+            <ToggleLanguage />
 
             {/* <div className='flex items-center gap-4'>
               <button className='md:hidden p-2 text-white'>

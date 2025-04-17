@@ -1,35 +1,19 @@
 // import CurveShape from '../components/ui/CurveShape';
 import ButtonLink from '@/components/ui/ButtonLink';
 import Icon from '@/components/ui/Icon';
+import { Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation('common');
+
   return (
-    <section
-      className='relative w-full pb-[240px] lg:pb-[350px] bg-intea-teal relative'
-      // style={{
-      //   backgroundImage: 'url("/svgs/hero-bg.svg")',
-      //   backgroundPosition: '0 0',
-      //   backgroundRepeat: 'no-repeat',
-      //   backgroundSize: 'cover',
-      // }}
-    >
+    <section className='relative w-full pb-[240px] lg:pb-[350px] bg-intea-teal relative'>
       <img
         src='/images/hero-spheres.png'
         alt='Hero Background'
         className='absolute -top-[100px] right-0 pointer-events-none lg:max-w-[70%] 2xl:max-w-[60%]'
       />
-
-      {/* <svg
-        xmlns='http://www.w3.org/2000/svg'
-        viewBox='0 0 1000 100'
-        preserveAspectRatio='none'
-        className='absolute bottom-[-1px] left-0 w-full'
-      >
-        <path
-          className='curve-shape-fill fill-intea-gray-light'
-          d='M500,97C126.7,96.3,0.8,19.8,0,0v100l1000,0V1C1000,19.4,873.3,97.8,500,97z'
-        ></path>
-      </svg> */}
 
       <svg
         viewBox='0 0 1920 152'
@@ -51,19 +35,22 @@ const Hero = () => {
         <div className='flex flex-col lg:flex-row items-start lg:items-start justify-between relative top-32'>
           <div className='lg:pt-28 lg:w-8/12 2xl:w-3/4 text-white'>
             <h1 className='text-4xl lg:text-6xl 2xl:text-8xl font-bold mb-6'>
-              Prontuário{' '}
-              <span className='text-intea-teal-darkest'>
-                digital <br /> integrativo
-              </span>{' '}
-              para o desenvolvimento do{' '}
-              <span className='text-intea-teal-darkest'>autista</span>.
+              <Trans
+                i18nKey='hero.title'
+                ns='common'
+                components={{
+                  highlight: <span className='text-intea-teal-darkest' />,
+                  break: <br />,
+                }}
+              />
             </h1>
 
-            <p className='text-lg lg:text-xl 2xl:text-2xl mb-8'>
-              Orienta a família e organiza as informações no enfrentamento dos
-              desafios apresentados pelo autismo. <br /> Intea armazena
-              informações de saúde de um paciente
-            </p>
+            <p
+              className='text-lg lg:text-xl 2xl:text-2xl mb-8'
+              dangerouslySetInnerHTML={{
+                __html: t('hero.description'),
+              }}
+            />
 
             <div className='flex flex-col lg:flex-row lg:flex-wrap gap-4'>
               <ButtonLink
@@ -72,7 +59,7 @@ const Hero = () => {
                 leftIcon='plus'
                 iconSize='sm'
               >
-                Conheça mais sobre o Intea
+                {t('hero.buttons.about')}
               </ButtonLink>
 
               <ButtonLink
@@ -81,7 +68,7 @@ const Hero = () => {
                 leftIcon='arrow-down'
                 iconSize='sm'
               >
-                Faça Download do App
+                {t('hero.buttons.donwload')}
               </ButtonLink>
             </div>
           </div>

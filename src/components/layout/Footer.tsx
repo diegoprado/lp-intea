@@ -1,4 +1,5 @@
 import React from 'react';
+import { Trans } from 'react-i18next';
 // import CurveShape from '../ui/CurveShape';
 
 /**
@@ -36,7 +37,10 @@ const Footer: React.FC = () => {
           {/* Copyright */}
           <div className='text-center '>
             <p className='text-white text-xl'>
-              © {currentYear} Intea. Todos direitos reservados.
+              <Trans
+                i18nKey='footer.copyright'
+                values={{ currentYear: currentYear }}
+              />
             </p>
           </div>
         </div>

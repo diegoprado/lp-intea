@@ -1,23 +1,19 @@
-import i18n from 'i18next';
+import i18n, { Resource } from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import Cookies from 'js-cookie';
 import ptCommon from '@locales/pt/common.json';
 import enCommon from '@locales/en/common.json';
 
-interface Resources {
-  [key: string]: {
-    [namespace: string]: Record<string, string>;
-  };
-}
+// interface Resources {
+//   [language: string]: {
+//     [namespace: string]: unknown;
+//   };
+// }
 
-const resources: Resources = {
-  pt: {
-    common: ptCommon,
-  },
-  en: {
-    common: enCommon,
-  },
+const resources: Resource = {
+  pt: { common: ptCommon },
+  en: { common: enCommon },
 };
 
 export const LANGUAGE_COOKIE = 'intea_language';
@@ -57,6 +53,10 @@ i18n
     debug: false,
     interpolation: {
       escapeValue: false,
+    },
+    react: {
+      useSuspense: false,
+      bindI18n: 'languageChanged',
     },
     resources,
     defaultNS: 'common',

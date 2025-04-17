@@ -16,20 +16,20 @@ const ToggleLanguage: React.FC = () => {
 
   const isPT = i18n.language === 'pt';
 
-  const toggleLanguage = () => {
-    const newLang = isPT ? 'en' : 'pt';
-    i18n.changeLanguage(newLang);
-    saveLanguagePreference(newLang);
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    saveLanguagePreference(lng);
+    window.location.reload();
   };
 
   return (
     <Button
-      onClick={toggleLanguage}
+      onClick={() => changeLanguage(isPT ? 'en' : 'pt')}
       variant='primary-teal'
       size='sm'
       className='py-3'
     >
-      <div className='flex items-center justify-between rounded-full  overflow-hidden px-2 pr-4 transition-colors '>
+      <div className='flex items-center justify-between rounded-full overflow-hidden px-2 pr-4 transition-colors'>
         <div className='relative w-14 h-8 bg-[#0E9488] rounded-full mr-3'>
           <div
             className={`absolute top-1 left-1 w-6 h-6 transition-transform duration-300 ${

@@ -1,5 +1,190 @@
 {
-  "welcome": "Welcome",
-  "changeLanguage": "Change language",
-  "description": "English content"
+  "hero": {
+    "title": "<highlight>Integrative digital</highlight> health record for <highlight>autism</highlight> development.",
+    "description": "Intea guides families and organizes information to more efficiently face the challenges of autism. With Intea, all patient health information is centralized and easily accessible.",
+    "buttons": {
+      "about": "Learn more about Intea",
+      "donwload": "Download the app"
+    }
+  },
+  "benefits": {
+    "title": "Our <highlight>Benefits</highlight>",
+    "description": "<highlight>Intea</highlight> is an innovative digital platform that simplifies the tracking of progress and communication between professionals and families in the care of children with ASD. By integrating health information and therapeutic interventions, Intea promotes continuous and personalized monitoring, ensuring collaboration among everyone involved in the patient's development."
+  },
+  "platformBenefits": {
+    "cards": [
+      {
+        "title": "For Patients",
+        "color": "teal",
+        "subtitle1": "Personalized Therapy",
+        "description1": "Personalized care focusing on each individual's specific needs.",
+        "subtitle2": "Continuous Monitoring",
+        "description2": "Detailed progress tracking, allowing for quick adjustments in interventions.",
+        "icon": "user-single",
+        "illustration": "/images/plafform-benefits/illustration-1.svg"
+      },
+      {
+        "title": "For Families",
+        "color": "orange",
+        "subtitle1": "Guidance and Empowerment",
+        "description1": "Access clear and organized information, making decision-making easier.",
+        "subtitle2": "Ease of Use",
+        "description2": "Detailed progress tracking, allowing for quick adjustments in interventions.",
+        "icon": "user-triple",
+        "illustration": "/images/plafform-benefits/illustration-2.svg"
+      },
+      {
+        "title": "For Professionals",
+        "color": "pink",
+        "subtitle1": "Integration and Collaboration",
+        "description1": "Tools for team collaboration with real-time information sharing.",
+        "subtitle2": "Efficiency in Care",
+        "description2": "Reduced time spent on bureaucracy and document organization.",
+        "icon": "hospital",
+        "illustration": "/images/plafform-benefits/illustration-3.svg"
+      },
+      {
+        "title": "For Society",
+        "color": "violet",
+        "subtitle1": "Inclusion and Access",
+        "description1": "Promoting the guarantee of rights and access to services for people with autism.",
+        "subtitle2": "Sustainability",
+        "description2": "Reducing environmental impact by eliminating paper usage.",
+        "icon": "user-triple",
+        "illustration": "/images/plafform-benefits/illustration-4.svg"
+      }
+    ]
+  },
+  "features": {
+    "title": "Main Features",
+    "description": "Discover the features of Intea that facilitate patient development monitoring with ASD, promoting integration and treatment efficiency.",
+    "cards": [
+      {
+        "id": 1,
+        "number": "1.",
+        "title": "Medical History and Reports",
+        "description": "Complete medical history record, including diagnoses, evaluations, and reports.",
+        "category": "dados"
+      },
+      {
+        "id": 2,
+        "number": "2.",
+        "title": "Therapeutic Prescriptions",
+        "description": "Storage of treatment plans, medications, therapies, and recommended interventions.",
+        "category": "dados"
+      },
+      {
+        "id": 3,
+        "number": "3.",
+        "title": "Growth and Development Data",
+        "description": "Growth charts, development graphs, and progress indicators.",
+        "category": "dados"
+      },
+      {
+        "id": 4,
+        "number": "4.",
+        "title": "Goal and Difficulty Tracking",
+        "description": "Definition of therapeutic and educational objectives, with continuous monitoring.",
+        "category": "desenvolvimento"
+      },
+      {
+        "id": 5,
+        "number": "5.",
+        "title": "Patient History",
+        "description": "Quick access to all updated information, providing a longitudinal view of development.",
+        "category": "desenvolvimento"
+      },
+      {
+        "id": 6,
+        "number": "6.",
+        "title": "Automated Feedback",
+        "description": "Generation of progress reports and visual charts to facilitate progress analysis.",
+        "category": "desenvolvimento"
+      },
+      {
+        "id": 7,
+        "number": "7.",
+        "title": "Personalized Creation",
+        "description": "Tools for creating individualized intervention plans, considering the patient's specific needs.",
+        "category": "plano"
+      },
+      {
+        "id": 8,
+        "number": "8.",
+        "title": "Skills to Be Developed",
+        "description": "Identification of focus areas such as communication, social skills, motor, and cognitive abilities.",
+        "category": "plano"
+      },
+      {
+        "id": 9,
+        "number": "9.",
+        "title": "Collaboration among Professionals",
+        "description": "Connection between therapists, doctors, teachers, and caregivers, allowing for information and strategy exchange.",
+        "category": "integracao"
+      },
+      {
+        "id": 10,
+        "number": "10.",
+        "title": "Interdisciplinary Strategies",
+        "description": "Suggestions for integrated approaches based on best practices and the patient’s needs.",
+        "category": "integracao"
+      },
+      {
+        "id": 11,
+        "number": "11.",
+        "title": "Access to Health Information",
+        "description": "Updated data on health issues, medications, and ongoing interventions.",
+        "category": "direitos"
+      },
+      {
+        "id": 12,
+        "number": "12.",
+        "title": "Prescriptions",
+        "description": "Functionality for digital prescriptions of medications and therapies, with alerts and reminders for families and professionals.",
+        "category": "direitos"
+      },
+      {
+        "id": 13,
+        "number": "13.",
+        "title": "Rights Facilitation",
+        "description": "Information on public policies, benefits, and resources available for individuals with autism.",
+        "category": "direitos"
+      },
+      {
+        "id": 14,
+        "number": "14.",
+        "title": "Cost Reduction",
+        "description": "Elimination of paper use and physical storage, with all data stored in the cloud.",
+        "category": "sustentabilidade"
+      },
+      {
+        "id": 15,
+        "number": "15.",
+        "title": "Secure Sharing",
+        "description": "Exchange of information between professionals and families with encryption and data protection, in compliance with LGPD (General Data Protection Law).",
+        "category": "sustentabilidade"
+      }
+    ]
+  },
+  "impact": {
+    "title": "Expected <highlight>Impact</highlight>",
+    "description1": "Intea can transform the care of autistic patients by offering an integrated solution that benefits everyone involved. By centralizing information and promoting personalized interventions, the app improves the quality of life for patients and their families.",
+    "description2": "Intea is a modern solution to tackle the challenges of autism, promoting inclusion, organization, and development, making it essential for both families and professionals.",
+    "button": "Download the App"
+  },
+  "howToUse": {
+    "title": "How to Use <highlight>Intea?</highlight>"
+  },
+  "contact": {
+    "title": "Intea is <highlight>coming!</highlight>",
+    "description": "Our app is almost ready to transform the way professionals and families manage therapeutic care. Stay tuned and be the first to know!",
+    "button": "Download the App",
+    "success": {
+      "title": "Thank you for subscribing!",
+      "description": "You will receive an email with more information when <highlight>Intea</highlight> is launched."
+    }
+  },
+  "footer": {
+    "copyright": "© {{currentYear}} Intea. All rights reserved."
+  }
 }
