@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon from './Icon';
 
-type CurveType = 'up' | 'down';
+type CurveType = 'up' | 'down' | 'up-smooth' | 'down-smooth';
 
 interface CurveShapeProps {
   type?: CurveType;
@@ -29,7 +29,7 @@ const CurveShape: React.FC<CurveShapeProps> = ({
 
   return (
     <div
-      className={`w-full overflow-hidden absolute left-0 right-0 ${
+      className={`w-full absolute left-0 right-0 ${
         type === 'up' ? 'bottom-0' : 'top-0'
       } ${className}`}
       style={{ height: heightValue }}
@@ -38,13 +38,14 @@ const CurveShape: React.FC<CurveShapeProps> = ({
         className='w-full h-full'
         style={{
           backgroundImage: `url('/svgs/${filename}')`,
-          backgroundSize: '100% 100%',
+          // backgroundSize: '100% 100%',
+          backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
+          // backgroundPosition: 'center',
           filter: fill !== 'white' ? `drop-shadow(0 0 0 ${fill})` : undefined,
         }}
       >
-        <div className='w-full flex items-center justify-center'>
+        <div className='w-full relative bottom-[100%] flex items-end justify-center'>
           {hasIconDown && (
             <Icon name='arrow-down' size='lg' color='white' className='mt-10' />
           )}

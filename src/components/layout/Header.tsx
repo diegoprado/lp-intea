@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
-// import LanguageSwitcher from '../LanguageSwitcher';
-// import Icon from '../ui/Icon';
+import ButtonLink from '../ui/ButtonLink';
 
 interface HeaderProps {
   className?: string;
 }
 
-// interface NavItem {
-//   label: string;
-//   icon: string;
-//   href: string;
-// }
+interface NavItem {
+  label: string;
+  icon: string;
+  href: string;
+}
 
 /**
  * Componente de cabeçalho principal do site
@@ -46,22 +45,22 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
 
     // Remover listener quando o componente for desmontado
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  // }, [prevScrollPos]);
+    // }, []);
+  }, [prevScrollPos]);
 
   // Itens de navegação principal
-  // const navItems: NavItem[] = [
-  //   { label: 'Home', icon: 'home', href: '/' },
-  //   { label: 'Famílias', icon: 'family', href: '/familias' },
-  //   { label: 'Profissionais', icon: 'professionals', href: '/profissionais' },
-  //   { label: 'Clínicas', icon: 'clinics', href: '/clinicas' },
-  //   { label: 'Blog', icon: 'blog', href: '/blog' },
-  // ];
+  const navItems: NavItem[] = [
+    { label: 'Sobre nós', icon: 'info', href: '/' },
+    { label: 'Famílias', icon: 'user-triple', href: '/familias' },
+    { label: 'Profissionais', icon: 'user-triple', href: '/profissionais' },
+    { label: 'Clínicas', icon: 'hospital', href: '/clinicas' },
+    { label: 'Blog', icon: 'chat', href: '/blog' },
+  ];
 
   return (
     <header
       className={`
-        fixed w-full top-12 left-0 right-0 z-50 
+        fixed w-full top-4 lg:top-12 left-0 right-0 z-50 
         transition-all duration-300 ease-in-out
         ${
           isVisible
@@ -71,8 +70,8 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
         ${className}
       `}
     >
-      <div className='container mx-auto px-4'>
-        <div className='bg-intea-teal-dark rounded-full py-4 px-6 shadow-lg'>
+      <div className='mx-auto px-2 lg:px-11 max-w-[1920px]'>
+        <div className='bg-intea-teal-darker rounded-full py-4 px-6 shadow-lg'>
           <div className='flex items-center justify-between md:justify-end gap-10'>
             {/* Logo */}
             <a href='/' className='flex items-center gap-3 max-w-32 mr-auto'>
@@ -116,6 +115,7 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
 
             {/* Menu mobile e seletor de idioma */}
             {/* <LanguageSwitcher /> */}
+            {/* <ToggleLanguage /> */}
 
             {/* <div className='flex items-center gap-4'>
               <button className='md:hidden p-2 text-white'>

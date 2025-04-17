@@ -26,7 +26,7 @@ const stepsData: Step[] = [
       </>
     ),
     description:
-      'Baixe o INTEA no seu dispositivo (Android/iOS) e crie uma conta gratuita. Preencha os dados do responsável pela criança e, em seguida, finalize o cadastro com as informações da criança e as permissões necessárias.',
+      'Baixe o Intea no seu dispositivo (Android/iOS) e crie uma conta gratuita. Preencha os dados do responsável pela criança e, em seguida, finalize o cadastro com as informações da criança e as permissões necessárias.',
     color: 'bg-intea-teal-dark',
     textColor: 'text-white',
     illustration: '/images/how-to-work/create.png',
@@ -74,7 +74,7 @@ const stepsData: Step[] = [
       </>
     ),
     description:
-      'A escola e a família também podem participar, recebendo orientações e feedbacks diretamente no app. O INTEA facilita a colaboração entre todos os envolvidos, promovendo o desenvolvimento contínuo da criança.',
+      'A escola e a família também podem participar, recebendo orientações e feedbacks diretamente no app. O Intea facilita a colaboração entre todos os envolvidos, promovendo o desenvolvimento contínuo da criança.',
     color: 'bg-intea-violet-dark',
     textColor: 'text-white',
     illustration: '/images/how-to-work/maximize.png',
@@ -129,7 +129,7 @@ const HowToUse: React.FC = () => {
   }, []);
 
   return (
-    <section className='py-24 bg-intea-gray-light'>
+    <section className='pt-12 pb-12 bg-intea-gray-light'>
       <div
         ref={isMobile() ? null : containerRef}
         className='container mx-auto px-4 mb-8 '

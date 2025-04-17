@@ -1,0 +1,38 @@
+.dados,
+.integracao {
+  &:nth-of-type(1) > div {
+    background-color: var(--color-intea-orange-light);
+  }
+  &:nth-of-type(2) > div {
+    background-color: var(--color-intea-orange);
+  }
+  &:nth-of-type(3) > div {
+    background-color: var(--color-intea-orange-dark);
+  }
+}
+
+.desenvolvimento,
+.direitos {
+  &:nth-of-type(1) > div {
+    background-color: var(--color-intea-pink-light);
+  }
+  &:nth-of-type(2) > div {
+    background-color: var(--color-intea-pink);
+  }
+  &:nth-of-type(3) > div {
+    background-color: var(--color-intea-pink-dark);
+  }
+}
+
+.plano,
+.sustentabilidade {
+  &:nth-of-type(1) > div {
+    background-color: var(--color-intea-violet-light);
+  }
+  &:nth-of-type(2) > div {
+    background-color: var(--color-intea-violet);
+  }
+  &:nth-of-type(3) > div {
+    background-color: var(--color-intea-violet-dark);
+  }
+}

@@ -24,7 +24,7 @@ function App() {
         />
         <JsonLd data={seoConfig.organizationSchema} />
 
-        <div className='min-h-screen'>
+        <div className='min-h-screen relative'>
           <Header />
           <main>
             <Hero />
