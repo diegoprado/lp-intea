@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Prontuário <highlight>digital <break/>integrativo</highlight> para o desenvolvimento do <highlight>autista</highlight>.",
-    "description": "Orienta a família e organiza as informações no enfrentamento dos desafios apresentados pelo autismo. <br /> Intea armazena informações de saúde de um paciente",
+    "description": "Orienta a família e organiza as informações no enfrentamento dos desafios apresentados pelo autismo. <br /> Intea armazena informações de saúde de um autista.",
     "buttons": {
       "about": "Conheça mais sobre o Intea",
       "donwload": "Faça o download do app"
@@ -9,7 +9,7 @@
   },
   "benefits": {
     "title": "Nossos <highlight>Benefícios</highlight>",
-    "description": "O <highlight>Intea</highlight> é uma plataforma digital inovadora que facilita o registro de evolução e a comunicação entre profissionais e famílias no atendimento a crianças com TEA. Integrando informações de saúde e intervenções terapêuticas, o Intea promove um acompanhamento contínuo e personalizado, garantindo colaboração entre todos os envolvidos no desenvolvimento do paciente."
+    "description": "O <highlight>Intea</highlight> é uma plataforma digital inovadora que facilita o registro de evolução e a comunicação entre profissionais e famílias no atendimento a crianças com TEA. Integrando informações de saúde e intervenções terapêuticas, o Intea promove um acompanhamento contínuo e personalizado, garantindo colaboração entre todos os envolvidos no desenvolvimento do autista."
   },
   "platformBenefits": {
     "cards": [
@@ -29,7 +29,7 @@
         "subtitle1": "Orientação e Empoderamento",
         "description1": "Acesso a informações claras e organizadas, facilitando a tomada de decisões.",
         "subtitle2": "Facilidade de Uso",
-        "description2": "Registro detalhado do progresso, permitindo ajustes rápidos nas intervenções.",
+        "description2": "Interface intuitiva que permite o registro e acompanhamento do desenvolvimento do autista.",
         "icon": "user-triple",
         "illustration": "/images/plafform-benefits/illustration-2.svg"
       },
@@ -47,7 +47,7 @@
         "title": "Para a Sociedade",
         "color": "violet",
         "subtitle1": "Inclusão e Acesso",
-        "description1": "Promoção da garantia de direitos e acesso a serviços para pessoas com autismo.",
+        "description1": "Promoção da garantia de direitos e acesso a serviços para o autista.",
         "subtitle2": "Sustentabilidade",
         "description2": "Redução do impacto ambiental com a eliminação do uso de papel.",
         "icon": "user-triple",
@@ -57,7 +57,7 @@
   },
   "features": {
     "title": "Principais Funcionalidades",
-    "description": "Conheça as funcionalidades do Intea, que facilitam o acompanhamento do desenvolvimento de pacientes com TEA, promovendo integração e eficiência no tratamento.",
+    "description": "Conheça as funcionalidades do Intea, que facilitam o acompanhamento do desenvolvimento de autista, promovendo integração e eficiência no tratamento.",
     "cards": [
       {
         "id": 1,
@@ -105,7 +105,7 @@
         "id": 7,
         "number": "7.",
         "title": "Elaboração Personalizada",
-        "description": "Ferramentas para criação de planos de intervenção individualizados, considerando as necessidades específicas do paciente.",
+        "description": "Ferramentas para criação de planos de intervenção individualizados, considerando as necessidades específicas do autista.",
         "category": "plano"
       },
       {
@@ -126,7 +126,7 @@
         "id": 10,
         "number": "10.",
         "title": "Estratégias Interdisciplinares",
-        "description": "Sugestões de abordagens integradas, baseadas nas melhores práticas e nas necessidades do paciente.",
+        "description": "Sugestões de abordagens integradas, baseadas nas melhores práticas e nas necessidades do autista.",
         "category": "integracao"
       },
       {
@@ -147,7 +147,7 @@
         "id": 13,
         "number": "13.",
         "title": "Facilitação de Direitos",
-        "description": "Informações sobre políticas públicas, benefícios e recursos disponíveis para pessoas com autismo.",
+        "description": "Informações sobre políticas públicas, benefícios e recursos disponíveis para o autista.",
         "category": "direitos"
       },
       {
@@ -168,7 +168,7 @@
   },
   "impact": {
     "title": "<highlight>Impacto</highlight> Esperado",
-    "description1": "O Intea pode transformar o cuidado de pacientes autistas, oferecendo uma solução integrada que beneficia todos os envolvidos. Ao centralizar informações e promover intervenções personalizadas, o aplicativo melhora a qualidade de vida dos pacientes e suas famílias.",
+    "description1": "O Intea pode transformar o cuidado de autistas, oferecendo uma solução integrada que beneficia todos os envolvidos. Ao centralizar informações e promover intervenções personalizadas, o aplicativo melhora a qualidade de vida dos autistas e suas famílias.",
     "description2": "O Intea é uma solução moderna para enfrentar os desafios do autismo, promovendo inclusão, organização e desenvolvimento, sendo essencial para famílias e profissionais.",
     "button": "Faça Download do App"
   },
