@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Prontuário <highlight>digital <break/>integrativo</highlight> para o desenvolvimento do <highlight>autista</highlight>.",
-    "description": "Orienta a família e organiza as informações no enfrentamento dos desafios apresentados pelo autismo. <br /> Intea armazena informações de saúde de um autista.",
+    "description": "Organiza e armazena informações, integra profissionais, permite acompanhamento do desenvolvimento do autista e empodera as famílias no enfrentamento dos desafios do autismo.",
     "buttons": {
       "about": "Conheça mais sobre o Intea",
       "donwload": "Faça o download do app"
@@ -15,6 +15,7 @@
     "cards": [
       {
         "title": "Para Pacientes",
+        
         "color": "teal",
         "subtitle1": "Terapia Individualizada",
         "description1": "Acompanhamento personalizado, com foco nas necessidades específicas de cada indivíduo.",
