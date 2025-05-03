@@ -10,10 +10,10 @@ const Contact = () => {
 
   return (
     <section className='bg-intea-gray-light px-4 lg:px-0 py-16' id='contact'>
-      <div className='container mx-auto bg-intea-teal rounded-3xl relative overflow-hidden after:content-[] after:absolute after:w-[70%] after:h-[100%] after:right-[0] after:top-0 after:bg-[url(/images/hero-spheres.png)] bg-contain p-8 lg:p-16'>
+      <div className='container mx-auto bg-intea-teal rounded-3xl relative overflow-hidden after:content-[] after:absolute after:w-[70%] after:h-[100%] after:right-[0] after:top-0 after:bg-[url(/images/hero-spheres.png)] bg-contain '>
         <div className='flex flex-col lg:flex-row gap-8 items-start lg:items-center relative z-10'>
           {/* Coluna do formulário */}
-          <div className='lg:w-1/2 text-white'>
+          <div className='lg:w-1/2 text-white p-8 lg:p-16'>
             <h2 className='text-4xl md:text-5xl font-bold mb-3'>
               <Trans
                 i18nKey='contact.title'
