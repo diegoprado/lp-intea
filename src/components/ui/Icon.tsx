@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 export type IconName = string;
 
 // Tamanhos predefinidos para ícones
-export type IconSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+export type IconSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 
 // Mapeamento de tamanhos para classes Tailwind
 const SIZE_CLASSES: Record<IconSize, string> = {
@@ -14,6 +14,7 @@ const SIZE_CLASSES: Record<IconSize, string> = {
   md: 'w-6 h-6', // 24px
   lg: 'w-8 h-8', // 32px
   xl: 'w-12 h-12', // 48px
+  '2xl': 'w-16 h-16', // 64px
 };
 
 interface IconProps {
@@ -38,6 +39,7 @@ interface IconProps {
  * - md: 24px (padrão)
  * - lg: 32px
  * - xl: 48px
+ * - 2xl: 64px
  *
  * Este componente busca o SVG e o insere diretamente no DOM,
  * permitindo que a propriedade color substitua o fill do SVG.

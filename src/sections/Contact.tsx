@@ -14,29 +14,13 @@ const Contact = () => {
         <div className='flex flex-col lg:flex-row gap-8 items-start lg:items-center relative z-10'>
           {/* Coluna do formulário */}
           <div className='lg:w-1/2 text-white p-8 lg:p-16'>
-            <h2 className='text-4xl md:text-5xl font-bold mb-3'>
-              <Trans
-                i18nKey='contact.title'
-                components={{
-                  highlight: <span className='text-intea-teal-darker' />,
-                }}
-              />
-            </h2>
-
-            <p className='text-xl mb-8'>{t('contact.description')}</p>
-
             {state.succeeded ? (
               <div className='bg-intea-teal-lighter/20 rounded-2xl p-8 text-center'>
-                <Icon
-                  name='check-circle'
-                  size='xl'
-                  color='white'
-                  className='mb-4'
-                />
-                <h3 className='text-2xl font-bold mb-2'>
+                <Icon name='check-circle' size='2xl' className='mb-4' />
+                <h3 className='text-4xl font-bold mb-2'>
                   {t('contact.success.title')}
                 </h3>
-                <p className='text-lg'>
+                <p className='text-2xl'>
                   <Trans
                     i18nKey='contact.success.description'
                     components={{
@@ -48,102 +32,115 @@ const Contact = () => {
                 </p>
               </div>
             ) : (
-              <form
-                onSubmit={handleSubmit}
-                className='contact-form flex flex-col gap-4 z-10'
-              >
-                {/* Nome */}
-                <div className='flex flex-col gap-2'>
-                  <label htmlFor='name'>Seu Nome</label>
-                  <div className='relative'>
-                    <div className='absolute left-4 top-1/2 -translate-y-1/2 text-gray-400'>
-                      <Icon name='user-single' size='sm' color='black' />
+              <>
+                <h2 className='text-4xl md:text-5xl font-bold mb-3'>
+                  <Trans
+                    i18nKey='contact.title'
+                    components={{
+                      highlight: <span className='text-intea-teal-darker' />,
+                    }}
+                  />
+                </h2>
+
+                <p className='text-xl mb-8'>{t('contact.description')}</p>
+
+                <form
+                  onSubmit={handleSubmit}
+                  className='contact-form flex flex-col gap-4 z-10'
+                >
+                  {/* Nome */}
+                  <div className='flex flex-col gap-2'>
+                    <label htmlFor='name'>Seu Nome</label>
+                    <div className='relative'>
+                      <div className='absolute left-4 top-1/2 -translate-y-1/2 text-gray-400'>
+                        <Icon name='user-single' size='sm' color='black' />
+                      </div>
+                      <input
+                        id='name'
+                        type='text'
+                        name='name'
+                        className='w-full rounded-full py-4 px-12 text-black bg-white/90'
+                        placeholder={isPt ? 'Nome' : 'Name'}
+                        required
+                      />
                     </div>
-                    <input
-                      id='name'
-                      type='text'
-                      name='name'
-                      className='w-full rounded-full py-4 px-12 text-black bg-white/90'
-                      placeholder={isPt ? 'Nome' : 'Name'}
-                      required
+                    <ValidationError
+                      prefix={isPt ? 'Nome' : 'Name'}
+                      field='name'
+                      errors={state.errors}
+                      className='text-red-300 text-sm'
                     />
                   </div>
-                  <ValidationError
-                    prefix={isPt ? 'Nome' : 'Name'}
-                    field='name'
-                    errors={state.errors}
-                    className='text-red-300 text-sm'
-                  />
-                </div>
 
-                {/* Email */}
-                <div className='flex flex-col gap-2'>
-                  <label htmlFor='email'>
-                    {isPt ? 'Seu Email' : 'Your Email'}
-                  </label>
-                  <div className='relative'>
-                    <div className='absolute left-4 top-1/2 -translate-y-1/2 text-gray-400'>
-                      <Icon name='email' size='sm' color='black' />
+                  {/* Email */}
+                  <div className='flex flex-col gap-2'>
+                    <label htmlFor='email'>
+                      {isPt ? 'Seu Email' : 'Your Email'}
+                    </label>
+                    <div className='relative'>
+                      <div className='absolute left-4 top-1/2 -translate-y-1/2 text-gray-400'>
+                        <Icon name='email' size='sm' color='black' />
+                      </div>
+                      <input
+                        id='email'
+                        type='email'
+                        name='email'
+                        className='w-full rounded-full py-4 px-12 text-black bg-white/90'
+                        placeholder={isPt ? 'Email' : 'Email'}
+                        required
+                      />
                     </div>
-                    <input
-                      id='email'
-                      type='email'
-                      name='email'
-                      className='w-full rounded-full py-4 px-12 text-black bg-white/90'
-                      placeholder={isPt ? 'Email' : 'Email'}
-                      required
+                    <ValidationError
+                      prefix={isPt ? 'Email' : 'Email'}
+                      field='email'
+                      errors={state.errors}
+                      className='text-red-300 text-sm'
                     />
                   </div>
-                  <ValidationError
-                    prefix={isPt ? 'Email' : 'Email'}
-                    field='email'
-                    errors={state.errors}
-                    className='text-red-300 text-sm'
-                  />
-                </div>
 
-                {/* Telefone */}
-                <div className='flex flex-col gap-2'>
-                  <label htmlFor='phone'>
-                    {isPt ? 'Seu Telefone' : 'Your Phone'}
-                  </label>
-                  <div className='relative'>
-                    <div className='absolute left-4 top-1/2 -translate-y-1/2 text-gray-400'>
-                      <Icon name='phone' size='sm' color='black' />
+                  {/* Telefone */}
+                  <div className='flex flex-col gap-2'>
+                    <label htmlFor='phone'>
+                      {isPt ? 'Seu Telefone' : 'Your Phone'}
+                    </label>
+                    <div className='relative'>
+                      <div className='absolute left-4 top-1/2 -translate-y-1/2 text-gray-400'>
+                        <Icon name='phone' size='sm' color='black' />
+                      </div>
+                      <input
+                        id='phone'
+                        type='tel'
+                        name='phone'
+                        className='w-full rounded-full py-4 px-12 text-black bg-white/90'
+                        placeholder={isPt ? 'Telefone' : 'Phone'}
+                      />
                     </div>
-                    <input
-                      id='phone'
-                      type='tel'
-                      name='phone'
-                      className='w-full rounded-full py-4 px-12 text-black bg-white/90'
-                      placeholder={isPt ? 'Telefone' : 'Phone'}
+                    <ValidationError
+                      prefix={isPt ? 'Telefone' : 'Phone'}
+                      field='phone'
+                      errors={state.errors}
+                      className='text-red-300 text-sm'
                     />
                   </div>
-                  <ValidationError
-                    prefix={isPt ? 'Telefone' : 'Phone'}
-                    field='phone'
-                    errors={state.errors}
-                    className='text-red-300 text-sm'
-                  />
-                </div>
 
-                <div className='mt-6'>
-                  <Button
-                    type='submit'
-                    variant='primary'
-                    className='submit-button w-full md:w-auto py-4 px-8 text-lg'
-                    disabled={state.submitting}
-                  >
-                    {state.submitting
-                      ? isPt
-                        ? 'Enviando...'
-                        : 'Sending...'
-                      : isPt
-                      ? 'Quero ser avisado'
-                      : 'I want to be notified'}
-                  </Button>
-                </div>
-              </form>
+                  <div className='mt-6'>
+                    <Button
+                      type='submit'
+                      variant='primary'
+                      className='submit-button w-full md:w-auto py-4 px-8 text-lg'
+                      disabled={state.submitting}
+                    >
+                      {state.submitting
+                        ? isPt
+                          ? 'Enviando...'
+                          : 'Sending...'
+                        : isPt
+                        ? 'Quero ser avisado'
+                        : 'I want to be notified'}
+                    </Button>
+                  </div>
+                </form>
+              </>
             )}
           </div>
 
@@ -152,7 +149,7 @@ const Contact = () => {
             <img
               src='/images/form-illustration.png'
               alt='Pessoa usando app Intea'
-              className='max-w-full md:max-w-xl'
+              // className='max-w-full md:max-w-xl'
             />
           </div>
         </div>
