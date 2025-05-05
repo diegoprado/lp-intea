@@ -14,6 +14,7 @@ interface Step {
   color: string;
   textColor: string;
   illustration: string;
+  backgroundIllustration: string;
 }
 
 const stepsDataPT: Step[] = [
@@ -31,6 +32,7 @@ const stepsDataPT: Step[] = [
     color: 'bg-intea-teal-dark',
     textColor: 'text-white',
     illustration: '/images/how-to-work/create.png',
+    backgroundIllustration: '/images/how-to-work/create-bg.png',
   },
   {
     id: 2,
@@ -38,10 +40,8 @@ const stepsDataPT: Step[] = [
     title: (
       <>
         Conecte-se com{' '}
-        <span className='text-intea-orange-darkest'>
-          clínicas e profissionais
-        </span>
-        .
+        <span className='text-intea-orange-darkest'>clínicas</span> e{' '}
+        <span className='text-intea-orange-darkest'>profissionais</span>.
       </>
     ),
     description:
@@ -49,6 +49,7 @@ const stepsDataPT: Step[] = [
     color: 'bg-intea-orange-dark',
     textColor: 'text-white',
     illustration: '/images/how-to-work/connect.png',
+    backgroundIllustration: '/images/how-to-work/connect-bg.png',
   },
   {
     id: 3,
@@ -64,6 +65,7 @@ const stepsDataPT: Step[] = [
     color: 'bg-intea-pink-dark',
     textColor: 'text-white',
     illustration: '/images/how-to-work/follow.png',
+    backgroundIllustration: '/images/how-to-work/follow-bg.png',
   },
   {
     id: 4,
@@ -79,6 +81,7 @@ const stepsDataPT: Step[] = [
     color: 'bg-intea-violet-dark',
     textColor: 'text-white',
     illustration: '/images/how-to-work/maximize.png',
+    backgroundIllustration: '/images/how-to-work/maximize-bg.png',
   },
 ];
 
@@ -97,6 +100,7 @@ const stepsDataEN: Step[] = [
     color: 'bg-intea-teal-dark',
     textColor: 'text-white',
     illustration: '/images/how-to-work/create.png',
+    backgroundIllustration: '/images/how-to-work/create-bg.png',
   },
   {
     id: 2,
@@ -112,6 +116,7 @@ const stepsDataEN: Step[] = [
     color: 'bg-intea-orange-dark',
     textColor: 'text-white',
     illustration: '/images/how-to-work/connect.png',
+    backgroundIllustration: '/images/how-to-work/connect-bg.png',
   },
   {
     id: 3,
@@ -126,6 +131,7 @@ const stepsDataEN: Step[] = [
     color: 'bg-intea-pink-dark',
     textColor: 'text-white',
     illustration: '/images/how-to-work/follow.png',
+    backgroundIllustration: '/images/how-to-work/follow-bg.png',
   },
   {
     id: 4,
@@ -141,6 +147,7 @@ const stepsDataEN: Step[] = [
     color: 'bg-intea-violet-dark',
     textColor: 'text-white',
     illustration: '/images/how-to-work/maximize.png',
+    backgroundIllustration: '/images/how-to-work/maximize-bg.png',
   },
 ];
 
@@ -152,9 +159,15 @@ const StepCard: React.FC<StepCardProps> = ({ step }) => {
   return (
     <div
       className={`${step.color} rounded-3xl p-8 text-white shadow-lg h-full relative overflow-hidden flex min-h-[550px]`}
+      style={{
+        backgroundImage: `url(${step.backgroundIllustration})`,
+        backgroundSize: 'contain',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
+      }}
     >
       <div className='relative z-10 w-full lg:w-1/2 pr-4 flex flex-col gap-2 lg:gap-6'>
-        <h3 className='text-5xl md:text-7xl font-bold mb-6'>{step.number}</h3>
+        <h3 className='text-5xl md:text-9xl font-bold mb-6'>{step.number}</h3>
         <h4 className='text-3xl md:text-5xl font-bold mb-4'>{step.title}</h4>
 
         <p className='text-lg md:text-2xl font-medium leading-relaxed'>
@@ -214,7 +227,7 @@ const HowToUse: React.FC = () => {
         <Swiper
           modules={[Pagination]}
           spaceBetween={24}
-          slidesPerView={'auto'}
+          slidesPerView={1.25}
           slidesOffsetBefore={offset}
           slidesOffsetAfter={offset}
           pagination={{
@@ -227,7 +240,7 @@ const HowToUse: React.FC = () => {
           {stepsData.map((step, index) => (
             <SwiperSlide
               key={index}
-              className='!w-[85%] md:!w-[70%] lg:!w-[60%]'
+              className='!w-[85%] md:!w-[70%] lg:!w-[75%]'
             >
               <StepCard step={step} />
             </SwiperSlide>

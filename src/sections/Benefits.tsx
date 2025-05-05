@@ -9,7 +9,7 @@ const Benefits = () => {
       <div className='flex flex-col gap-20'>
         <div className='relative w-full'>
           <div className='container mx-auto px-4 flex flex-col lg:flex-row gap-8 items-center justify-start'>
-            <div className='flex flex-col items-start gap-8 bg-white rounded-4xl py-16 px-10 shadow-[0px_24px_48px_-12px_rgba(41,37,36,0.18)] w-full lg:max-w-[575px] 2xl:max-w-[750px] 3xl:max-w-[1200px]'>
+            <div className='flex flex-col items-start gap-8 bg-white rounded-4xl py-16 px-10 shadow-[0px_24px_48px_-12px_rgba(41,37,36,0.18)] w-full lg:max-w-[575px] 2xl:max-w-[750px] 4xl:max-w-[1200px]'>
               <div className='flex flex-col gap-10'>
                 <h2 className='text-4xl lg:text-5xl 2xl:text-7xl font-bold text-intea-teal-dark'>
                   <Trans
