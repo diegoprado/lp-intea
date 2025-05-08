@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "title": "Sobre <highlight>Nós</highlight>",
+    "description": "Conheça a nossa história, missão e valores, e entenda o compromisso que temos com a inovação e a transformação social. Estamos aqui para fazer a diferença na vida das pessoas, promovendo soluções que impactam positivamente a comunidade.",
+    "image": "/images/hero-about.png"
+  },
+
+  "originSection": {
+    "title": "Como o <highlight>Intea</highlight> surgiu?",
+    "paragraphs": [
+      "O Intea surgiu da experiência pessoal do Dr. Charles Drumond, defensor dos direitos sociais e da inclusão, e pai de três filhos com Transtorno do Espectro Autista (TEA). Ao enfrentar os desafios do cuidado e do acompanhamento do desenvolvimento de seus filhos, Charles se motivou a criar uma solução que facilitasse a comunicação e o monitoramento.",
+      "Em 2022, ao descobrir que também era autista, sua empatia e vontade de promover mudanças aumentaram. Assim, fundou a Associação Mineira de Defesa dos Direitos do Autista (AMMDA) e criou o INTEA, uma plataforma digital inovadora que integra informações de saúde e terapias, promovendo colaboração entre profissionais e empoderando famílias no cuidado de seus filhos com TEA."
+    ]
+  },
+
+  "missionSection": {
+    "title": "Missão",
+    "paragraphs": [
+      "No Intea, nossa missão é transformar o cuidado de crianças com Transtorno do Espectro Autista (TEA) por meio de uma plataforma digital inovadora que centraliza dados de saúde e intervenções terapêuticas. Buscamos simplificar a comunicação entre famílias, profissionais e cuidadores, criando uma rede de apoio eficiente.",
+      "Nosso objetivo é garantir um acompanhamento contínuo e personalizado, utilizando dados para apoiar o desenvolvimento das crianças de forma respeitosa às suas individualidades. Acreditamos que, ao integrar essas informações e facilitar a colaboração, podemos melhorar a qualidade de vida dos pacientes e fortalecer o papel das famílias no cuidado."
+    ]
+  },
+
+  "valuesSection": {
+    "title": "Valores",
+    "list": [
+      "<b>Facilitar a comunicação</b> entre famílias, profissionais e pessoas no espectro, criando uma rede de apoio eficiente.",
+      "<b>Otimizar o acompanhamento terapêutico</b> com dados personalizados para um cuidado contínuo e individualizado.",
+      "<b>Democratizar o acesso a informações</b> confiáveis sobre o TEA, promovendo compreensão e suporte adequado.",
+      "<b>Promover a inclusão</b> com ferramentas acessíveis, respeitando as individualidades de todos no espectro.",
+      "<b>Ser uma ponte colaborativa</b> que empodera todos os envolvidos no desenvolvimento autista, com respeito e praticidade."
+    ]
+  },
+
+  "aboutCharlesSection": {
+    "title": "Conheça Charles",
+    "paragraphs": [
+      {
+        "title": "Compromisso com os Direitos Sociais e Inclusão",
+        "description": "Dr. Charles Drumond é um incansável defensor dos direitos sociais e da inclusão. Ele atua como Procurador Municipal de Ibirité e Presidente do Sindicato dos Servidores Públicos Municipais de Ibirité, Sarzedo e Mário Campos (SINDSP), além de ser Diretor Jurídico da Federação dos Servidores Públicos Municipais de Minas Gerais (FESMIG), defendendo os direitos dos servidores públicos."
+      },
+      {
+        "title": "Experiência Pessoal que o Motiva",
+        "description": "Pai de Miguel (13 anos, autista com apoio de nível 1), Pedro (9 anos, autista com apoio de nível 3 e não verbal) e Téo (5 anos), a experiência pessoal de Charles motiva seu compromisso com a causa do autismo. Os diagnósticos de seus filhos o levaram a descobrir em 2022 que ele também é autista, aprofundando sua empatia."
+      },
+      {
+        "title": "Iniciativas pela Mudança e Inclusão",
+        "description": "Para promover a inclusão, ele fundou a Associação Mineira de Defesa dos Direitos do Autista (AMMDA), apoiando os direitos das pessoas com Transtorno do Espectro Autista (TEA) e suas famílias. Charles também criou o Intea, o primeiro Prontuário Digital Interativo para o Desenvolvimento do Tratamento do Autismo, uma ferramenta criada para apoiar indivíduos, famílias e profissionais, com um impacto social significativo."
+      }
+    ]
+  }
+}

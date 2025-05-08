@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "title": "About <highlight>Us</highlight>",
+    "description": "Learn about our history, mission, and values, and understand our commitment to innovation and social transformation. We are here to make a difference in people’s lives, promoting solutions that positively impact the community.",
+    "image": "/images/hero-about.png"
+  },
+
+  "originSection": {
+    "title": "How did <highlight>Intea</highlight> come about?",
+    "paragraphs": [
+      "Intea was born from the personal experience of Dr. Charles Drumond, a defender of social rights and inclusion, and a father of three children with Autism Spectrum Disorder (ASD). Faced with the challenges of caring for and monitoring his children's development, Charles was motivated to create a solution that would facilitate communication and tracking. In 2022, after discovering that he, too, is autistic, his empathy and desire to drive change grew even stronger. He then founded the Minas Gerais Association for the Defense of Autistic Rights (AMMDA) and created Intea, an innovative digital platform that integrates health information and therapies, promoting collaboration among professionals and empowering families in caring for individuals with ASD."
+    ]
+  },
+
+  "missionSection": {
+    "title": "Mission",
+    "paragraphs": [
+      "At Intea, our mission is to transform the care of children with Autism Spectrum Disorder (ASD) through an innovative digital platform that centralizes health data and therapeutic interventions. We aim to simplify communication between families, professionals, and caregivers, creating an efficient support network.",
+      "Our goal is to ensure continuous and personalized monitoring, using data to support the development of children in a way that respects their individuality. We believe that by integrating this information and facilitating collaboration, we can improve patients' quality of life and strengthen the role of families in care."
+    ]
+  },
+
+  "valuesSection": {
+    "title": "Values",
+    "list": [
+      "Facilitate communication between families, professionals, and individuals on the spectrum, creating an efficient support network.",
+      "Optimize therapeutic monitoring with personalized data for continuous and individualized care.",
+      "Democratize access to reliable information about ASD, promoting understanding and adequate support.",
+      "Promote inclusion with accessible tools, respecting the individuality of everyone on the spectrum.",
+      "Be a collaborative bridge that empowers everyone involved in autism development, with respect and practicality."
+    ]
+  },
+
+  "aboutCharlesSection": {
+    "title": "Meet Charles",
+    "paragraphs": [
+      {
+        "title": "Commitment to Social Rights and Inclusion",
+        "description": "Dr. Charles Drumond is an unwavering advocate for social rights and inclusion. He serves as the Municipal Attorney of Ibirité and President of the Union of Municipal Public Servants of Ibirité, Sarzedo, and Mário Campos (SINDSP), as well as Legal Director of the Federation of State and Municipal Public Servants of Minas Gerais (FESMIG), defending the rights of public servants."
+      },
+      {
+        "title": "Personal Experience that Drives Him",
+        "description": "Father of Miguel (13 years old, autistic with level 1 support), Pedro (9 years old, autistic with level 3 support and nonverbal), and Téo (5 years old), Charles' personal experience motivates his commitment to the autism cause. His children's diagnoses led him to discover in 2022 that he is also autistic, deepening his empathy."
+      },
+      {
+        "title": "Initiatives for Change and Inclusion",
+        "description": "To promote inclusion, he founded the Minas Gerais Association for the Defense of Autistic Rights (AMMDA), supporting the rights of individuals with Autism Spectrum Disorder (ASD) and their families. Charles also created Intea, the first Interactive Digital Record for the Development of Autism Treatment, a tool designed to support individuals, families, and professionals, with significant social impact."
+      }
+    ]
+  }
+}

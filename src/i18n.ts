@@ -4,6 +4,8 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import Cookies from 'js-cookie';
 import ptCommon from '@locales/pt/common.json';
 import enCommon from '@locales/en/common.json';
+import ptAbout from '@locales/pt/about.json';
+import enAbout from '@locales/en/about.json';
 
 // interface Resources {
 //   [language: string]: {
@@ -12,8 +14,8 @@ import enCommon from '@locales/en/common.json';
 // }
 
 const resources: Resource = {
-  pt: { common: ptCommon },
-  en: { common: enCommon },
+  pt: { common: ptCommon, about: ptAbout },
+  en: { common: enCommon, about: enAbout },
 };
 
 export const LANGUAGE_COOKIE = 'intea_language';

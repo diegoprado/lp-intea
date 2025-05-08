@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import ToggleLanguage from '../ToggleLanguage';
+import ButtonLink from '../ui/ButtonLink';
+import i18n from '@/i18n';
 // import ButtonLink from '../ui/ButtonLink';
 
 interface HeaderProps {
   className?: string;
 }
 
-// interface NavItem {
-//   label: string;
-//   icon: string;
-//   href: string;
-// }
+interface NavItem {
+  label: string;
+  icon: string;
+  href: string;
+}
 
 /**
  * Componente de cabeçalho principal do site
@@ -50,13 +52,22 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
   }, [prevScrollPos]);
 
   // Itens de navegação principal
-  // const navItems: NavItem[] = [
-  //   { label: 'Sobre nós', icon: 'info', href: '/' },
-  //   { label: 'Famílias', icon: 'user-triple', href: '/familias' },
-  //   { label: 'Profissionais', icon: 'user-triple', href: '/profissionais' },
-  //   { label: 'Clínicas', icon: 'hospital', href: '/clinicas' },
-  //   { label: 'Blog', icon: 'chat', href: '/blog' },
-  // ];
+  const navItemsPT: NavItem[] = [
+    { label: 'Sobre nós', icon: 'info', href: '/about' },
+    // { label: 'Famílias', icon: 'user-triple', href: '/familias' },
+    // { label: 'Profissionais', icon: 'user-triple', href: '/profissionais' },
+    // { label: 'Clínicas', icon: 'hospital', href: '/clinicas' },
+    // { label: 'Blog', icon: 'chat', href: '/blog' },
+  ];
+  const navItemsEN: NavItem[] = [
+    { label: 'About us', icon: 'info', href: '/about' },
+    // { label: 'Famílias', icon: 'user-triple', href: '/familias' },
+    // { label: 'Profissionais', icon: 'user-triple', href: '/profissionais' },
+    // { label: 'Clínicas', icon: 'hospital', href: '/clinicas' },
+    // { label: 'Blog', icon: 'chat', href: '/blog' },
+  ];
+
+  const navItems = i18n.language === 'pt' ? navItemsPT : navItemsEN;
 
   return (
     <header
@@ -99,7 +110,7 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
             </a> */}
 
             {/* Navegação */}
-            {/* <nav className='hidden md:flex items-center gap-10'>
+            <nav className='hidden md:flex items-center gap-10'>
               {navItems.map((item) => (
                 <ButtonLink
                   key={item.label}
@@ -112,7 +123,7 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
                   {item.label}
                 </ButtonLink>
               ))}
-            </nav> */}
+            </nav>
 
             {/* Menu mobile e seletor de idioma */}
             {/* <LanguageSwitcher /> */}
